@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dr. Anand’s Pets Clinic</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet"/>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+</head>
+<body>
+  <header>
+    <div class="container nav-container">
+      <div class="logo">
+        <img src="img/logo.jpg" alt="Clinic Logo" />
+        <!-- <span>Dr. Anand's Pets Clinic</span> -->
+      </div>
+      
+      <!-- Hamburger menu for mobile -->
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      
+      <nav role="navigation" id="nav-menu">
+        <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about-us">About Us</a></li>
+        <li><a href="#when-to-visit">When to Visit</a></li>
+        <li><a href="#hints-tips">Hints and Tips</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="/contact-us.html" class="nav-contact-page">Contact Us</a></li>
+      </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Banner Carousel -->
+  <section class="hero" id="home" aria-label="Hero banner carousel">
+  <div class="carousel" role="region" aria-roledescription="carousel" aria-live="polite" aria-atomic="true">
+    <div class="carousel-slide active" data-slide-index="0" tabindex="0" aria-hidden="false">
+      <img src="img/Dog.jpeg" alt="Happy pets" />
+      <div class="hero-content">
+        <h1>We really care about your pet's welfare!</h1>
+        <p>Dr. Anand's Pets Clinic is a veterinary hospital with a unique approach to your pet's healthcare.</p>
+        <a href="tel:+919810167060" class="btn btn-hero-book" aria-label="Book appointment for We really care about your pet's welfare">Book Appointment</a>
+      </div>
+    </div>
+
+    <div class="carousel-slide" data-slide-index="1" tabindex="-1" aria-hidden="true">
+      <img src="img/Cat.jpeg" alt="Clinic care" />
+      <div class="hero-content">
+        <h1>24-Hours Emergency Vet Clinic</h1>
+        <p>Your pet's health is our life's mission. Immediate care, modern facilities.</p>
+        <a href="tel:+919810167060" class="btn btn-hero-book" aria-label="Book appointment for 24-Hours Emergency Vet Clinic">Book Appointment</a>
+      </div>
+    </div>
+
+    <div class="carousel-slide" data-slide-index="2" tabindex="-1" aria-hidden="true">
+      <img src="img/pets.png" alt="Pet diagnostics" />
+      <div class="hero-content">
+        <h1>Comprehensive Services</h1>
+        <p>Diagnostics, Surgery, Vaccination, Grooming, and more—all under one roof.</p>
+        <a href="tel:+919810167060" class="btn btn-hero-book" aria-label="Book appointment for Comprehensive Services">Book Appointment</a>
+      </div>
+    </div>
+
+    <div class="carousel-slide" data-slide-index="3" tabindex="-1" aria-hidden="true">
+      <img src="img/Dog.jpeg" alt="Pet wellness" />
+      <div class="hero-content">
+        <h1>Personalized Pet Wellness</h1>
+        <p>Expert veterinarians for your fur family's complete care.</p>
+        <a href="tel:+919810167060" class="btn btn-hero-book" aria-label="Book appointment for Personalized Pet Wellness">Book Appointment</a>
+      </div>
+    </div>
+
+    <div class="carousel-controls">
+      <button class="carousel-btn prev" aria-label="Previous slide">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+      </button>
+      <button class="carousel-btn next" aria-label="Next slide">
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- About Us Preview -->
+  <section class="about-preview container" id="about-us">
+  <div class="about-content">
+    <img 
+      src="img/Dogwithdocs.jpeg" 
+      alt="About Dr. Anand’s Pets Clinic" 
+      loading="lazy"
+      width="400"
+      height="auto" 
+    />
+    <div class="about-text">
+      <h2>About Us</h2>
+      <p>
+        Dr. Anand's Pets Clinic in West Delhi/NCR has been offering
+        compassionate care since 1983, specializing in veterinary
+        emergencies and critical care.
+      </p>
+      <a href="about.html" class="btn btn-readmore" aria-label="Read more about Dr. Anand's Pets Clinic">Read More</a>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Why Choose Us -->
+  <section class="why-choose-us">
+    <div class="container">
+      <h2>Why Choose Us</h2>
+      <div class="reason-grid">
+        <!-- Each reason box -->
+        <div class="reason-box">
+          <i class="fa fa-wallet"></i>
+          <h3>AFFORDABLE SERVICES</h3>
+          <p>
+            Full range of quality services at fair prices, from vaccinations to wellness checks.
+          </p>
+        </div>
+        <div class="reason-box">
+          <i class="fa fa-user-md"></i>
+          <h3>QUALIFIED STAFF</h3>
+          <p>
+            Experienced veterinary professionals with over 40 years combined care.
+          </p>
+        </div>
+        <div class="reason-box">
+          <i class="fa fa-x-ray"></i>
+          <h3>DIGITAL RADIOGRAPHY</h3>
+          <p>
+            Advanced imaging technology for accurate diagnosis and treatment.
+          </p>
+        </div>
+        <div class="reason-box">
+          <i class="fa fa-clock"></i>
+          <h3>Same Day Report/Immediate Report</h3>
+          <p>
+            Fast and reliable blood and diagnostic test results.
+          </p>
+        </div>
+        <div class="reason-box">
+          <i class="fa fa-tint"></i>
+          <h3>Blood Test Report within 15 Minutes</h3>
+          <p>
+            Quick turnaround for comprehensive blood testing services.
+          </p>
+        </div>
+        <div class="reason-box">
+          <i class="fa fa-ambulance"></i>
+          <h3>24 Hours Emergency Services</h3>
+          <p>
+            Round-the-clock emergency veterinary care whenever you need it.
+          </p>
+        </div>
+        <div class="reason-box">
+          <i class="fa fa-hospital"></i>
+          <h3>Well Equipped Operation Theatre for all Surgeries</h3>
+          <p>
+            Modern surgical facilities with top-notch equipment for varied procedures.
+          </p>
+        </div>
+        <div class="reason-box">
+          <i class="fa fa-globe"></i>
+          <h3>USA Trained Expert on Ultrasound and Ecography</h3>
+          <p>
+            Specialists trained internationally ensuring the best non-invasive studies.
+          </p>
+        </div>
+        <div class="reason-box">
+          <i class="fa fa-stethoscope"></i>
+          <h3>Europe Trained Cardiologist for Pets</h3>
+          <p>
+            Expert cardiac care and diagnosis from internationally certified cardiologists.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pet Healthcare Service Section -->
+  <section class="pet-healthcare container" id="services">
+    <h2>Pet Healthcare Service at Dr. Anand’s Pet’s Clinic</h2>
+    <div class="service-list">
+  <div class="service-item">
+    <i class="fa-solid fa-user-md"></i>
+    <h3>Consultation</h3>
+    <ul>
+      <li>Regular Health Check-Up</li>
+      <li>Injury, Wound And Trauma Care</li>
+      <li>Dental</li>
+      <li>Deworming</li>
+      <li>Tick & Flea Control</li>
+    </ul>
+  </div>
+  <div class="service-item">
+    <i class="fa fa-syringe"></i>
+    <h3>Vaccination</h3>
+    <ul>
+      <li>Puppy</li>
+      <li>Dog</li>
+      <li>Kitten</li>
+      <li>Cat</li>
+    </ul>
+  </div>
+  <div class="service-item">
+    <i class="fa fa-microscope"></i>
+    <h3>In-house diagnostics</h3>
+    <ul>
+      <li>Blood Test</li>
+      <li>Biochemistry Test</li>
+      <li>Urine Analysis</li>
+      <li>X-Ray & Imaging</li>
+      <li>Biopsy</li>
+      <li>Endoscopy</li>
+    </ul>
+  </div>
+  <div class="service-item">
+     <i class="fa fa-cut"></i>
+    <h3>Surgery</h3>
+    <ul>
+      <li>Elective (Spay/Neuter/Gastropexy)</li>
+      <li>Emergency/Urgent</li>
+      <li>Laparoscopy</li>
+    </ul>
+  </div>
+  <div class="service-item">
+     <i class="fa fa-dumbbell"></i>
+    <h3>Pet Physiotherapy</h3>
+    <ul>
+      <li>Post-Surgery Recovery</li>
+      <li>Hip Dysplasia</li>
+      <li>Pain Management Paralysis & IVDD</li>
+      <li>Arthritis</li>
+    </ul>
+  </div>
+  <div class="service-item">
+     <i class="fa fa-shower"></i>
+    <h3>Grooming</h3>
+    <ul>
+      <li>Cat Spa Bath</li>
+      <li>Cat Haircut/Trim</li>
+      <li>Dog Spa Bath</li>
+      <li>Dog Haircut/Trim</li>
+    </ul>
+  </div>
+</div>
+<!-- Bottom Row, full-width container with 3 boxes inside -->
+<div class="service-row special-row">
+  <div class="service-item">
+     <i class="fa fa-heartbeat"></i>
+    <h3>Intensive Care</h3>
+    <ul>
+      <li>Post-Surgery Care</li>
+      <li>Accidental Trauma Care</li>
+      <li>Chronic Disease Management</li>
+      <li>Acute Care & Management</li>
+    </ul>
+  </div>
+  <div class="service-item">
+     <i class="fa fa-box-open"></i>
+    <h3>Pet Supplies</h3>
+    <ul>
+      <li>Dog Food & Treats</li>
+      <li>Puppy Food</li>
+      <li>Cat Food & Treats</li>
+      <li>Kitten Food</li>
+    </ul>
+  </div>
+  <div class="service-promo">
+    <p>
+      Dog & Cat Toys<br>
+      Grooming, Check-Up, Vaccination,<br>
+      Deworming, Food Or Toys: What Does Your Pet Need Today?
+    </p>
+    <a href="tel:+919810167060" class="btn btn-orange">Book Now</a>
+  </div>
+</div>
+  </section>
+
+  <!-- Services We Render with Addresses -->
+  <section class="services-render container" id="when-to-visit">
+  <h2>Services We Render</h2>
+  <article class="service-card">
+    <div class="service-content">
+      <div class="services-list">
+        <ul>
+          <li>Intensive Care For Life Threatening Disease</li>
+          <li>Fully Equipped Operation Theatre For Soft Tissue & Orthopaedic & Spinal Surgeries</li>
+          <li>Ultrasonic Dental Scaling</li>
+          <li>ECG/Echocardiograph</li>
+          <li>Ultrasound with Color Doppler</li>
+          <li>Automated Blood Tests</li>
+          <li>Hi-Tech Microscope for Diagnosis of Blood Protozoan Disease</li>
+          <li>Digital X-Rays</li>
+          <li>Assisted Reproduction</li>
+          <li>Treatment / Vaccination</li>
+          <li>24 Hours Emergency Services</li>
+        </ul>
+      </div>
+      <div class="service-address-section">
+        <div class="service-address-box">
+          <h3>Vikas Puri Centre</h3>
+          <div><strong>Contact Address</strong><br>
+          56 & 58, 1st Floor, DDA Local Shopping Centre Block - J,<br>
+          Vikas Puri, New Delhi - 110 018.</div>
+          <div style="margin-top:12px;"><strong>Contact Numbers</strong><br>
+          011 - 28543773 / 49120170</div>
+        </div>
+        <div class="service-decorative">
+          <div class="paw-pattern"></div>
+          <div class="medical-icons">
+            <div class="icon-circle">🏥</div>
+            <div class="icon-circle">🩺</div>
+            <div class="icon-circle">💊</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
+
+
+  <!-- Free Consultation Section -->
+  <section class="free-consultation" style="background-color:#FF6633;">
+    <div class="container free-consultation-content">
+      <h2>First time? Get your free consultation on us!</h2>
+      <a href="tel:+919810167060" class="btn btn-consultation">Book Appointment</a>
+    </div>
+  </section>
+
+  <!-- Experience Stats with Background & Form -->
+  <section class="experience-stats-wrapper" style="background-color:#f6efea;padding:60px 0;" id="contact-form">
+  <div class="container experience-stats-content">
+    <div class="stats-numbers">
+      <div class="stat-card">
+        <div class="stat-icon-container">
+          <i class="fa-regular fa-calendar-days"></i>
+        </div>
+        <h3 class="stat-number" data-target="70" data-plus="true">0</h3>
+        <p>Years of operations</p>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon-container">
+          <i class="fa-solid fa-hospital"></i>
+        </div>
+        <h3 class="stat-number" data-target="15">0</h3>
+        <p>Hospitals and clinics</p>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon-container">
+          <i class="fa-solid fa-users"></i>
+        </div>
+        <h3 class="stat-number" data-target="50" data-plus="true">0</h3>
+        <p>Number of Pets</p>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon-container">
+          <i class="fa-solid fa-user-doctor"></i>
+        </div>
+        <h3 class="stat-number" data-target="250" data-plus="true">0</h3>
+        <p>Combined years of experience</p>
+      </div>
+    </div>
+    <div class="booking-form-container">
+      <h3>Book an Appointment</h3>
+      <form id="experience-booking-form">
+        <input type="text" name="name" placeholder="Full Name" required autocomplete="name" />
+        <input type="tel" name="phone" placeholder="Phone No." required pattern="[0-9]{10}" autocomplete="tel" />
+        <select name="location" required>
+          <option value="" disabled selected>Prefer location</option>
+          <option value="Vikas Puri">Vikas Puri</option>
+          <option value="Janakpuri">Janakpuri</option>
+          <option value="GK-1">GK-1 (South Delhi)</option>
+        </select>
+        <button type="submit" class="btn btn-form-submit">Book Appointment</button>
+        <p id="booking-response" class="form-response"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Staff / Qualified Team -->
+  <section class="staff container">
+  <h2>Meet our professionals</h2>
+  <div class="staff-grid">
+    <article class="staff-member">
+      <img src="img/Drrkanand.png" alt="Dr. R K Anand" />
+      <h3>Dr. R K Anand</h3>
+      <p>Chief Executive Officer & Senior Veterinary Consultant</p>
+      <p class="bio">
+        A supportive, calm and understanding veterinarian is akin to a warm blanket. Even when you don’t need it, it reminds you of comfort. Dr. Anand’s pets clinic in West Delhi/NCR is providing such services to its clients since the year 1983. The care clinic was established to meet the need of veterinary emergencies & critical care for pets being run by a team of essentially experienced veterinary professionals under the inspirational leadership of Dr. R.K Anand, the center is excellent in its surgical, reproduction and ultrasound support and its recently set critical care unit. Ably supported by Dr. Gautam Anand, the clinic is flourishing in its service exclusive blessings of God providing uncompromising care and assistance to all animals.
+      </p>
+    </article>
+    <article class="staff-member">
+      <img src="img/drgautam.png" alt="Dr. Gautam Anand" />
+      <h3>Dr. Gautam Anand</h3>
+      <p>Senior Veterinary Consultant & Specialist Canine Surgery</p>
+      <p class="bio">
+        A supportive, calm and understanding veterinarian is akin to a warm blanket. Even when you don’t need it, it reminds you of comfort. Dr. Anand’s pets clinic in West Delhi/NCR is providing such services to its clients since the year 1983. The care clinic was established to meet the need of veterinary emergencies & critical care for pets being run by a team of essentially experienced veterinary professionals under the inspirational leadership of Dr. R.K Anand, the center is excellent in its surgical, reproduction and ultrasound support and its recently set critical care unit. Ably supported by Dr. Gautam Anand, the clinic is flourishing in its service exclusive blessings of God providing uncompromising care and assistance to all animals.
+      </p>
+    </article>
+  </div>
+</section>
+
+  <!-- Testimonials -->
+  <section class="testimonials container">
+  <h2>Testimonials</h2>
+  <div class="testimonial-carousel">
+    <div class="testimonial-slide active">
+      <div class="testimonial-quote">&#10077;</div>
+      <div class="testimonial-content">
+        <p>
+          My very dear friend and life saviour for my 4 legged kids time and time again. This doctor is no hit and trial person and exactly knows what is going to cure your loved one and overall routine checkups. In short Gautam Anand is brilliant. Been waiting for GK centre since long.
+        </p>
+        <div class="testimonial-author">Vishal Malik</div>
+        <div class="testimonial-meta">What people say about us</div>
+      </div>
+      <div class="testimonial-quote right">&#10078;</div>
+    </div>
+    <div class="testimonial-slide">
+      <div class="testimonial-quote">&#10077;</div>
+      <div class="testimonial-content">
+        <p>
+          The vets and the staff have always been very supportive and helpful. I am grateful for their prompt responses in emergency situations. Highly recommend Dr. Anand's clinic for all pet parents!
+        </p>
+        <div class="testimonial-author">Priya Sharma</div>
+        <div class="testimonial-meta">What people say about us</div>
+      </div>
+      <div class="testimonial-quote right">&#10078;</div>
+    </div>
+    <div class="testimonial-slide">
+      <div class="testimonial-quote">&#10077;</div>
+      <div class="testimonial-content">
+        <p>
+          Professional, compassionate, and very knowledgeable. My golden retriever Max always gets the best care here. The team is fantastic and caring.
+        </p>
+        <div class="testimonial-author">Arjun Mehra</div>
+        <div class="testimonial-meta">What people say about us</div>
+      </div>
+      <div class="testimonial-quote right">&#10078;</div>
+    </div>
+    <div class="testimonial-slide">
+      <div class="testimonial-quote">&#10077;</div>
+      <div class="testimonial-content">
+        <p>
+          Excellent surgeon and takes time to explain things. Our cat recovered faster than expected. Will always trust Dr. Anand's team for any pet health issues.
+        </p>
+        <div class="testimonial-author">Neha Kapoor</div>
+        <div class="testimonial-meta">What people say about us</div>
+      </div>
+      <div class="testimonial-quote right">&#10078;</div>
+    </div>
+    <div class="testimonial-slide">
+      <div class="testimonial-quote">&#10077;</div>
+      <div class="testimonial-content">
+        <p>
+          Reliable, affordable, and dedicated—this clinic is a blessing for pet owners in West Delhi. Quick emergency services and a big heart!
+        </p>
+        <div class="testimonial-author">Ravi Gupta</div>
+        <div class="testimonial-meta">What people say about us</div>
+      </div>
+      <div class="testimonial-quote right">&#10078;</div>
+    </div>
+    <div class="testimonial-slide">
+      <div class="testimonial-quote">&#10077;</div>
+      <div class="testimonial-content">
+        <p>
+          Dr. Anand and Dr. Gautam have made every visit a positive one. Their love for animals shines through. My pets are always at ease here.
+        </p>
+        <div class="testimonial-author">Simran Kaur</div>
+        <div class="testimonial-meta">What people say about us</div>
+      </div>
+      <div class="testimonial-quote right">&#10078;</div>
+    </div>
+    <div class="testimonial-dots"></div>
+  </div>
+</section>
+
+
+  <!-- Photo Gallery -->
+  <section class="photo-gallery container" id="gallery">
+    <h2>Photo Gallery</h2>
+    <div class="gallery-grid">
+      <img src="photo1.jpg" alt="Pet photo 1" />
+      <img src="photo2.jpg" alt="Pet photo 2" />
+      <img src="photo3.jpg" alt="Pet photo 3" />
+      <!-- Add more photos -->
+    </div>
+  </section>
+
+  <!-- Video Gallery -->
+  <section class="video-gallery container">
+    <h2>Video Gallery</h2>
+    <div class="video-wrapper">
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </section>
+
+  <!-- Hints & Tips Section -->
+<section class="hints-tips container">
+  <h2>Hints & Tips for Pet Owners</h2>
+  <div class="hints-list">
+    <article class="hint-item">
+      <button class="hint-question" aria-expanded="false" aria-controls="hint1" id="hint1-button">
+        1. Should I give human medicine to pets without vet consultation?
+        <span class="btn-readmore toggle-text">Read More</span>
+      </button>
+      <div id="hint1" class="hint-answer" role="region" aria-labelledby="hint1-button" hidden>
+        <p>
+          No medicine should be given to your pet without prior consultation with a veterinarian.
+          Certain human medicines can be dangerous or contraindicated for animals.
+        </p>
+      </div>
+    </article>
+
+    <article class="hint-item" id="hints-tips">
+      <button class="hint-question" aria-expanded="false" aria-controls="hint2" id="hint2-button">
+        2. Can I feed salt and sugar to my dog?
+        <span class="btn-readmore toggle-text">Read More</span>
+      </button>
+      <div id="hint2" class="hint-answer" role="region" aria-labelledby="hint2-button" hidden>
+        <p>
+          Salt and sugar in moderate quantities can be added to your dog's diet.
+          It is a myth that dogs should not be fed any sugar or salt.
+        </p>
+      </div>
+    </article>
+
+    <article class="hint-item">
+      <button class="hint-question" aria-expanded="false" aria-controls="hint3" id="hint3-button">
+        3. How should I check my dog after a walk?
+        <span class="btn-readmore toggle-text">Read More</span>
+      </button>
+      <div id="hint3" class="hint-answer" role="region" aria-labelledby="hint3-button" hidden>
+        <p>
+          After coming back from a walk, always check all paws for the presence of any foreign body,
+          such as thorns, seeds, or ticks.
+        </p>
+      </div>
+    </article>
+
+    <article class="hint-item">
+      <button class="hint-question" aria-expanded="false" aria-controls="hint4" id="hint4-button">
+        4. Is it safe to leave my dog in a closed car?
+        <span class="btn-readmore toggle-text">Read More</span>
+      </button>
+      <div id="hint4" class="hint-answer" role="region" aria-labelledby="hint4-button" hidden>
+        <p>
+          Never leave your dog in a closed car with windows rolled up.
+          Dogs can't tolerate the greenhouse effect and heat inside the vehicle, which can cause heat stroke.
+        </p>
+      </div>
+    </article>
+
+    <article class="hint-item">
+      <button class="hint-question" aria-expanded="false" aria-controls="hint5" id="hint5-button">
+        5. At what age is a dog mature for breeding?
+        <span class="btn-readmore toggle-text">Read More</span>
+      </button>
+      <div id="hint5" class="hint-answer" role="region" aria-labelledby="hint5-button" hidden>
+        <p>
+          Dogs are generally considered mature for breeding at around 1 to 1.5 years of age.
+          Female dogs (bitches) should not be mated on their first heat cycle.
+        </p>
+      </div>
+    </article>
+
+    <!-- You can add more hints here, following the same structure -->
+  </div>
+</section>
+
+
+  <!-- Latest Blogs -->
+  <!-- <section class="latest-blogs container">
+    <h2>Latest Blogs</h2>
+    <div class="blog-list">
+      <article class="blog-post">
+        <img src="blog1.jpg" alt="Buddy's journey to recovery" />
+        <div class="blog-content">
+          <h3>Buddy's journey to recovery is nothing short of inspiring</h3>
+          <p>Post on 12-06-2025 by Dr. Anand team</p>
+          <a href="blog.html" class="btn btn-readmore">Read More</a>
+        </div>
+      </article> -->
+      <!-- Repeat other blog posts similarly -->
+    <!-- </div>
+  </section> -->
+
+  <!-- FAQ Section -->
+  <section class="faq container" aria-label="Frequently Asked Questions">
+    <h2>FAQ’s</h2>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">Where can I find a Vetic Pet Clinic near me?</button>
+      <div class="faq-answer" hidden>
+        <p>Our clinics are located at Vikas Puri, Janakpuri, and GK-1.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">Does Vetic Pet Clinics near me provide blood tests, X-ray and USG services?</button>
+      <div class="faq-answer" hidden>
+        <p>Yes, all our clinics offer comprehensive diagnostic services including blood tests, X-rays, and ultrasounds.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">Does the Vetic Clinic in Delhi have surgery facilities?</button>
+      <div class="faq-answer" hidden>
+        <p>Yes, we have fully equipped operation theatres across all centers.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">Does Vetic Pet Clinic in Delhi provide post-surgery care?</button>
+      <div class="faq-answer" hidden>
+        <p>Absolutely, we provide thorough post-operative and intensive care.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">How can I book a veterinary doctor's appointment at a Vetic pet clinic near me?</button>
+      <div class="faq-answer" hidden>
+        <p>You can book via phone (click "Book Appointment"), WhatsApp, or fill our contact form.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Google Map Embed -->
+  <section class="map container">
+    <h2>Find Us</h2>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224893.42153186983!2d77.06889972223997!3d28.52790621670785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5f6a92b69df%3A0x7eee8b541af38408!2sDr.%20Anand%20Pets%20Clinic!5e0!3m2!1sen!2sin!4v1594658049685!5m2!1sen!2sin"
+      width="100%"
+      height="450"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Clinic Location"
+    ></iframe>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+  <div class="footer-inner container">
+    <!-- Left: Logo & Description -->
+    <div class="footer-column footer-brand">
+      <img src="img/logo.jpg" alt="Dr. Anand's Pets Clinic logo" class="footer-logo" />
+      <p class="footer-desc">
+        Dr. Anands Pets clinic is a veterinary hospital<br>
+        with a unique approach to the healthcare<br>
+        of your pet.
+      </p>
+    </div>
+
+    <!-- Center: Vertical Footer Menu -->
+    <nav class="footer-column footer-menu-col" aria-label="Footer menu">
+      <ul class="footer-menu">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about-us">About Us</a></li>
+        <li><a href="#when-to-visit">When to Visit</a></li>
+        <li><a href="#hints-tips">Hints & Tips</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="/contact-us.html">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <!-- Right: Locations (3 columns) -->
+    <div class="footer-column footer-branches">
+      <div class="footer-branch">
+        <div class="branch-title">Janakpuri Centre</div>
+        <div class="branch-address">
+          C-2-C/132, Pocket 12, Main Road<br>
+          C-2-B to Dabri Mor, Janakpuri,<br>
+          New Delhi - 110 058
+        </div>
+        <div class="branch-contact">
+          <div>Contact Numbers</div>
+          <a href="tel:01125552500" class="branch-phone">011 - 25552500</a>
+        </div>
+      </div>
+      <div class="footer-branch">
+        <div class="branch-title">GK - 1 Centre (South Delhi)</div>
+        <div class="branch-address">
+          R - 21, Basement Greater Kailash - 1,<br>
+          Main MBlock Market Road,<br>
+          New Delhi - 110 048
+        </div>
+        <div class="branch-contact">
+          <div>Contact Numbers</div>
+          <a href="tel:01149901447" class="branch-phone">011 - 49901447</a> /
+          <a href="tel:7042474447" class="branch-phone">7042474447</a>
+        </div>
+      </div>
+      <div class="footer-branch">
+        <div class="branch-title">Vikas Puri Centre</div>
+        <div class="branch-address">
+          56 & 58, 1st Floor, DDA Local Shopping Centre Block - J,<br>
+          Vikas Puri,<br>
+          New Delhi - 110 018
+        </div>
+        <div class="branch-contact">
+          <div>Contact Numbers</div>
+          <a href="tel:01128543773" class="branch-phone">011 - 28543773</a> /
+          <a href="tel:49120170" class="branch-phone">49120170</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    Dr Anands Pets Clinic © 2016 All Rights Reserved
+    <a href="terms.html">Terms of Use</a> and
+    <a href="privacy.html">Privacy Policy</a>
+  </div>
+</footer>
+
+
+
+
+  <!-- Floating WhatsApp and Call Icons -->
+  <a
+    href="https://wa.me/919810167060?text=Hello%20Clinic%20Team"
+    class="float-icon whatsapp-icon"
+    target="_blank"
+    aria-label="Chat with us on WhatsApp"
+    ><i class="fab fa-whatsapp"></i
+  ></a>
+  <a href="tel:+919810167060" class="float-icon call-icon" aria-label="Call Clinic">
+    <i class="fas fa-phone"></i>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
