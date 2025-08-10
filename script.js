@@ -174,26 +174,108 @@ if (testimonialSlides.length > 0 && dotsContainer) {
 }
 
 //===============Hits & Tips =====//
-document.querySelectorAll('.hint-question').forEach(button => {
-    button.addEventListener('click', () => {
-      const isExpanded = button.getAttribute('aria-expanded') === 'true';
+// Image data for each question
+const imageData = {
+  medicine: {
+    caption: "Always consult with a veterinarian before giving any medicine to your pet."
+  },
+  food: {
+    caption: "Proper nutrition with balanced salt and sugar is important for your pet's health."
+  },
+  walking: {
+    caption: "Regular paw checks after walks help prevent infections and injuries."
+  },
+  car: {
+    caption: "Never leave your pet in a closed car - it can be life-threatening."
+  },
+  breeding: {
+    caption: "Consult with a veterinarian to determine the right breeding age for your pet."
+  }
+};
 
-      // Collapse all other hints (optional: comment this block if you want multiple open)
-      document.querySelectorAll('.hint-question').forEach(btn => {
-        btn.setAttribute('aria-expanded', 'false');
-        btn.querySelector('.toggle-text').textContent = 'Read More';
-      });
-      document.querySelectorAll('.hint-answer').forEach(ans => {
-        ans.hidden = true;
-      });
-
-      if (!isExpanded) {
-        button.setAttribute('aria-expanded', 'true');
-        button.querySelector('.toggle-text').textContent = 'Read Less';
-        const answer = document.getElementById(button.getAttribute('aria-controls'));
-        if (answer) {
-          answer.hidden = false;
-        }
-      }
-    });
+// Function to change image and caption
+function changeImage(imageType) {
+  // Hide all images
+  document.querySelectorAll('.hint-image').forEach(img => {
+    img.classList.remove('active');
   });
+  
+  // Show selected image
+  const selectedImage = document.getElementById(imageType);
+  if (selectedImage) {
+    selectedImage.classList.add('active');
+  }
+  
+  // Update caption
+  const captionElement = document.getElementById('image-caption-text');
+  if (captionElement && imageData[imageType]) {
+    captionElement.textContent = imageData[imageType].caption;
+  }
+}
+
+// Enhanced hints functionality
+document.querySelectorAll('.hint-question').forEach(button => {
+  button.addEventListener('click', () => {
+    const isExpanded = button.getAttribute('aria-expanded') === 'true';
+    const imageType = button.getAttribute('data-image');
+
+    // Remove active class from all questions
+    document.querySelectorAll('.hint-question').forEach(btn => {
+      btn.classList.remove('active');
+      btn.setAttribute('aria-expanded', 'false');
+      btn.querySelector('.toggle-text').textContent = 'Read More';
+    });
+    
+    // Hide all answers
+    document.querySelectorAll('.hint-answer').forEach(ans => {
+      ans.hidden = true;
+    });
+
+    // If clicking on a different question or expanding current one
+    if (!isExpanded) {
+      button.classList.add('active');
+      button.setAttribute('aria-expanded', 'true');
+      button.querySelector('.toggle-text').textContent = 'Read Less';
+      
+      const answer = document.getElementById(button.getAttribute('aria-controls'));
+      if (answer) {
+        answer.hidden = false;
+      }
+    }
+
+    // Always change the image when clicking on any question
+    if (imageType) {
+      changeImage(imageType);
+    }
+  });
+
+  // Change image on hover for better UX
+  button.addEventListener('mouseenter', () => {
+    const imageType = button.getAttribute('data-image');
+    if (imageType) {
+      changeImage(imageType);
+    }
+  });
+});
+
+// Initialize with first question's image
+document.addEventListener('DOMContentLoaded', () => {
+  changeImage('medicine');
+});
+// ========= ABOUT PHIL READ MORE TOGGLE =========
+    document.getElementById('aboutPhilReadMore').addEventListener('click', function() {
+    const more = document.querySelector('.about-phil-more');
+    if (more.hidden) {
+      more.hidden = false;
+      this.textContent = "Read Less";
+    } else {
+      more.hidden = true;
+      this.textContent = "Read More";
+    }
+  });
+
+
+
+
+
+

@@ -188,8 +188,8 @@ nav a:focus {
 
 .carousel-controls {
   position: absolute;
-  bottom: 14px;
-  right: 10px;
+  bottom: 10px;
+  right: 50%;
   display: flex;
   gap: 12px;
   z-index: 10;
@@ -216,8 +216,9 @@ nav a:focus {
 /* MOBILE RESPONSIVE STYLES */
 @media (max-width: 768px) {
   /* Prevent horizontal overflow */
-  body {
+  html, body {
     overflow-x: hidden;
+    max-width: 100%;
   }
   
   /* Header Mobile */
@@ -275,15 +276,17 @@ nav a:focus {
   }
   
   /* Hero Mobile - Fix overflow issues */
-  .hero {
-    height: 350px; /* Reduced height for mobile */
-    width: 100vw; /* Full viewport width */
-    margin-left: calc(-50vw + 50%); /* Center align full width */
+   .hero {
+    height: 350px;
+    width: 100%; /* Changed from 100vw */
+    margin-left: 0; /* Removed problematic calc */
+    position: relative;
   }
   
   .carousel {
     height: 350px;
     width: 100%;
+    overflow: hidden; /* Add this to prevent overflow */
   }
   
   .carousel-slide {
@@ -295,6 +298,7 @@ nav a:focus {
     height: 350px;
     width: 100%;
     object-fit: cover;
+    min-width: 100%; /* Ensure images don't shrink below container width */
   }
   
   .hero-content {
@@ -381,6 +385,335 @@ nav a:focus {
     width: 32px;
     height: 32px;
     font-size: 1rem;
+  }
+}
+/* Prescription Styles */
+.prescription-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border: 3px solid #ff6633;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .header-section {
+            display: flex;
+            padding: 15px;
+            background: white;
+        }
+
+        .doctor-left {
+            flex: 1;
+            padding-right: 15px;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        .hospital-center {
+            flex: 2;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hospital-name {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ff6633;
+            margin-bottom: 5px;
+        }
+
+        .tagline {
+            font-size: 16px;
+            color: #666;
+            font-style: italic;
+            margin: 2px 0;
+        }
+
+        .doctor-right {
+            flex: 1;
+            padding-left: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            text-align: right;
+        }
+
+        .logo-container {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-container img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .doctor-info {
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        .contact-section {
+            display: flex;
+            background: #f8f8f8;
+            border-top: 1px solid #ddd;
+        }
+
+        .contact-block {
+            flex: 1;
+            padding: 15px;
+            border-right: 1px solid #ddd;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .contact-block:last-child {
+            border-right: none;
+        }
+
+        .contact-header {
+            font-weight: bold;
+            color: #2d5016;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .website-link {
+            color: #0066cc;
+            text-decoration: underline;
+        }
+
+        /* Mobile responsive - keep same layout but scale down */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .header-section {
+                padding: 10px 8px;
+            }
+            
+            .doctor-left, .doctor-info {
+                font-size: 11px;
+            }
+            
+            .hospital-name {
+                font-size: 20px;
+            }
+            
+            .tagline {
+                font-size: 12px;
+            }
+            
+            .logo-container {
+                width: 45px;
+                height: 45px;
+            }
+            
+            .logo-container img {
+                width: 40px;
+                height: 40px;
+            }
+            
+            .contact-block {
+                padding: 10px 8px;
+                font-size: 10px;
+            }
+            
+            .contact-header {
+                font-size: 11px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .doctor-left, .doctor-info {
+                font-size: 9px;
+            }
+            
+            .hospital-name {
+                font-size: 16px;
+            }
+            
+            .tagline {
+                font-size: 10px;
+            }
+            
+            .contact-block {
+                font-size: 8px;
+                padding: 8px 5px;
+            }
+            
+            .contact-header {
+                font-size: 9px;
+            }
+        }
+
+        /* Ensure consistent layout for PDF export */
+        @media print {
+            body {
+                padding: 0;
+            }
+            .prescription-container {
+                border: 2px solid #ff6633;
+                box-shadow: none;
+            }
+        }
+
+/* Divider line */
+.prescripbox-divider {
+  margin-top: 20px;
+  border-top: 1.6px dashed #cbb295;
+}
+
+/* About/Philosophy content styling */
+.about-phil-row {
+  margin-top: 22px;
+  padding-top: 0;
+}
+.about-phil-content {
+  flex: 1 1 530px;
+  min-width: 340px;
+  background: #fafdff;
+  border-radius: 14px;
+  padding: 22px 34px 22px 44px;
+  box-shadow: 0 1px 6px rgba(78,142,164,.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1.3px solid #e1eaf2;
+}
+.about-phil-content h2 {
+  color: #234e70;
+  font-size: 2.15rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  margin-top: 4px;
+  line-height: 1.18;
+  align-items: center;
+  text-align: center;
+}
+.about-phil-desc p {
+  color: #525d6f;
+  font-size: 1.13rem;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+.btn-readmore {
+  background-color: #ff6633;
+  color: white;
+  padding: 11px 26px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1.06rem;
+  cursor: pointer;
+  border: none;
+  display: inline-block;
+  margin-top: 8px;
+  transition: background-color 0.3s;
+}
+.btn-readmore:hover, .btn-readmore:focus {
+  background-color: #298838;
+  outline: none;
+}
+
+/* Responsive for mobile/tablet */
+@media (max-width: 1100px) {
+  .prescripbox-combo-w { padding: 0 2vw 24px 2vw; }
+  .prescripbox-flexrow-w { flex-direction: column; gap: 16px; align-items: stretch; }
+  .prescripbox-center, .prescripbox-drright, .prescripbox-drleft { align-items: center; text-align: center; }
+  .about-phil-content { min-width: 0; padding: 18px 10vw; }
+  .prescripbox-horizrow-w { flex-direction: column; gap: 5px; }
+  .prescripbox-horizrow-w > div { min-width: 0; flex: 1 1 100%; }
+}
+@media (max-width: 650px) {
+  .prescripbox-combo-w { padding: 0; }
+  .about-phil-content { padding: 12px 3vw; }
+  .prescripbox-drleft, .prescripbox-drright { font-size: 0.98rem; }
+  .prescripbox-hospitalname-w { font-size: 1.18rem; }
+}
+/* ===== MOBILE FIXES ===== */
+@media (max-width: 768px) {
+
+  /* Stack the top three columns nicely */
+  .prescripbox-flexrow-w {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Make each column take full available width */
+  .prescripbox-col-w {
+    flex: 1 1 100%;
+    padding: 0;
+  }
+
+  /* Doctor left/right text aligned nicely on mobile */
+  .prescripbox-drleft, 
+  .prescripbox-drright, 
+  .prescripbox-center {
+    align-items: center;
+    text-align: center;
+    flex: 1 1 100%;
+  }
+
+  /* Logo centered above text in right column */
+  .prescripbox-drright {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .prescripbox-logo-w {
+    margin: 0 auto;
+  }
+
+  /* Contact + timing blocks: stack vertically full-width */
+  .prescripbox-contact-timing {
+    flex-direction: column;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .prescripbox-contact-block,
+  .prescripbox-timing-block {
+    flex: 1 1 100%;
+  }
+
+  /* About section spacing on mobile */
+  .about-phil-content {
+    padding: 16px 14px;
+    border-radius: 10px;
+  }
+  .about-phil-content h2 {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+  .about-phil-desc p {
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+  .btn-readmore {
+    font-size: 0.95rem;
+    padding: 9px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Slightly smaller fonts for very small devices */
+  .prescripbox-hospitalname-w {
+    font-size: 1.2rem;
+  }
+  .prescripbox-tagline-w {
+    font-size: 0.9rem;
+  }
+  .prescripbox-drleft,
+  .prescripbox-drright {
+    font-size: 0.95rem;
   }
 }
 
@@ -1193,140 +1526,326 @@ nav a:focus {
 /* VIDEO GALLERY */
 
 .video-gallery {
-  padding: 54px 0;
-  max-width: 900px;
-  margin: 0 auto;
+            padding: 54px 0;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .video-gallery h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #234e70;
+            font-size: 2.2rem;
+            font-weight: 600;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 24px;
+            padding: 0 20px;
+        }
+
+        .video-item {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(35, 78, 112, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .video-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(35, 78, 112, 0.25);
+        }
+
+        .video-item iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            border-radius: 12px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .video-grid {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(6, 1fr);
+                gap: 20px;
+                padding: 0 15px;
+            }
+            
+            .video-gallery h2 {
+                font-size: 1.8rem;
+                margin-bottom: 30px;
+            }
+            
+            .video-gallery {
+                padding: 40px 0;
+            }
+        }
+
+        /* Tablet Responsive */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .video-grid {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                gap: 20px;
+            }
+        }
+
+        /* Small Mobile */
+        @media (max-width: 480px) {
+            .video-gallery {
+                padding: 30px 0;
+            }
+            
+            .video-gallery h2 {
+                font-size: 1.6rem;
+                margin-bottom: 25px;
+            }
+            
+            .video-grid {
+                gap: 16px;
+                padding: 0 10px;
+            }
+        }
+/* Hits & Tips */
+.hints-tips {
+  max-width: 1200px; /* Increased from 700px */
+  margin: 48px auto;
+  padding: 0 20px;
+  font-family: inherit;
 }
-.video-gallery h2 {
-  text-align: center;
-  margin-bottom: 24px;
-  color: #234e70;
+
+.hints-tips h2 {
   font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 36px;
+  color: #234e70;
+  font-weight: 700;
 }
-.video-wrapper {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
-  height: 0;
+
+/* Main container for two-column layout */
+.hints-container {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+/* Left side - Questions */
+.hints-list {
+  flex: 1;
+  border-radius: 12px;
   overflow: hidden;
-  border-radius: 14px;
-  box-shadow: 0 6px 22px rgba(35, 78, 112, 0.12);
+  box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+  background-color: #f6efe9;
 }
-.video-wrapper iframe,
-.video-wrapper object,
-.video-wrapper embed {
+
+/* Right side - Images */
+.hints-images {
+  flex: 1;
+  position: sticky;
+  top: 100px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.image-container {
+  position: relative;
+  width: 500px; /* Increased from 400px */
+  height: 500px;
+  overflow: hidden;
+}
+
+.hint-image {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  border: 0;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 
-/* Hits & Tips */
-.hints-tips {
-    max-width: 700px;
-    margin: 48px auto;
-    padding: 0 20px;
-    font-family: inherit;
-  }
+.hint-image.active {
+  opacity: 1;
+}
 
-  .hints-tips h2 {
-    font-size: 2.2rem;
-    text-align: center;
-    margin-bottom: 36px;
-    color: #234e70;
-    font-weight: 700;
-  }
+.image-caption {
+  padding: 20px;
+  background: #f8f8f8;
+  border-top: 1px solid #e0e0e0;
+}
 
-  .hints-list {
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
-    background-color: #f6efe9;
-  }
+.image-caption p {
+  margin: 0;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+  font-style: italic;
+  text-align: center;
+}
 
-  .hint-item + .hint-item {
-    border-top: 1px solid #e0dcd5;
-  }
+/* Question items styling */
+.hint-item + .hint-item {
+  border-top: 1px solid #e0dcd5;
+}
 
+.hint-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 20px 30px;
+  text-align: left;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ff6633;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+  transition: all 0.3s ease;
+}
+
+.hint-question:hover,
+.hint-question:focus {
+  background-color: #f4d6c1;
+  outline: none;
+}
+
+.hint-question.active {
+  background-color: #ff6633;
+  color: white;
+}
+
+.hint-question.active .btn-readmore {
+  background-color: white;
+  color: #ff6633;
+}
+
+.btn-readmore {
+  background-color: #ff6633;
+  color: white;
+  padding: 10px 28px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  display: inline-block;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  user-select: none;
+}
+
+.btn-readmore:hover,
+.btn-readmore:focus {
+  background-color: #298838;
+  outline: none;
+}
+
+.hint-answer {
+  padding: 0 30px 20px 30px;
+  color: #555;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.5;
+  background-color: #fff;
+  border-top: 1px solid #ffd6b3;
+  animation: fadeInHeight 0.4s ease forwards;
+}
+
+@keyframes fadeInHeight {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 200px;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .hints-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .hints-images {
+    position: relative;
+    top: auto;
+    order: -1; /* Show image above questions on mobile */
+  }
+  
+  .image-container {
+    height: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hints-tips {
+    padding: 0 15px;
+  }
+  
+  .hints-container {
+    gap: 25px;
+  }
+  
+  .image-container {
+    height: 250px;
+  }
+  
+  .image-caption {
+    padding: 15px;
+  }
+  
+  .image-caption p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hints-tips {
+    padding: 0 12px;
+  }
+  
   .hint-question {
-    width: 100%;
-    background: none;
-    border: none;
-    padding: 20px 30px;
-    text-align: left;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #ff6633;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    user-select: none;
-  }
-
-  .hint-question:hover,
-  .hint-question:focus {
-    background-color: #f4d6c1;
-    outline: none;
-  }
-
-  .btn-readmore {
-    background-color: #ff6633;
-    color: white;
-    padding: 10px 28px;
-    border-radius: 30px;
-    font-weight: 600;
     font-size: 1rem;
-    cursor: pointer;
-    border: none;
-    display: inline-block;
-    text-decoration: none;
-    transition: background-color 0.3s;
-    user-select: none;
+    padding: 16px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
   }
-  .btn-readmore:hover,
-  .btn-readmore:focus {
-    background-color: #298838;
-    outline: none;
-  }
-
+  
   .hint-answer {
-    padding: 0 30px 20px 30px;
-    color: #555;
-    font-weight: normal;
-    font-size: 1rem;
-    line-height: 1.5;
-    background-color: #fff;
-    border-top: 1px solid #ffd6b3;
-    animation: fadeInHeight 0.4s ease forwards;
+    padding: 0 20px 16px 20px;
+    font-size: 0.95rem;
   }
+  
+  .image-container {
+    height: 200px;
+  }
+  
+  .btn-readmore {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+}
 
-  @keyframes fadeInHeight {
-    from {
-      opacity: 0;
-      max-height: 0;
-    }
-    to {
-      opacity: 1;
-      max-height: 200px;
-    }
-  }
-
-  /* Responsive */
-  @media (max-width: 480px) {
-    .hints-tips {
-      padding: 0 12px;
-    }
-    .hint-question {
-      font-size: 1rem;
-      padding: 16px 24px;
-    }
-    .hint-answer {
-      padding: 0 24px 16px 24px;
-      font-size: 0.95rem;
-    }
-  }
 
 /* LATEST BLOGS */
 
@@ -1664,9 +2183,9 @@ nav a:focus {
 .float-icon {
   position: fixed;
   bottom: 24px;
-  width: 64px;
-  height: 64px;
-  font-size: 2.8rem;
+  width: 50px;
+  height: 50px;
+  font-size: 1.8rem;
   color: white;
   border-radius: 50%;
   display: flex;
@@ -1678,11 +2197,12 @@ nav a:focus {
   animation: floatPulse 1.8s infinite alternate ease-in-out;
 }
 .whatsapp-icon {
-  right: 100px;
+  float: left;
+  margin-left: 35px;
   background-color: #25d366;
 }
 .call-icon {
-  right: 24px;
+  right: 30px;
   background-color: #ff6633;
 }
 .float-icon:hover,
@@ -1747,4 +2267,5 @@ nav a:focus {
   .blog-list {
     flex-direction: column;
   }
+  
 }
