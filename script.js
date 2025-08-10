@@ -262,17 +262,6 @@ document.querySelectorAll('.hint-question').forEach(button => {
 document.addEventListener('DOMContentLoaded', () => {
   changeImage('medicine');
 });
-// ========= ABOUT PHIL READ MORE TOGGLE =========
-    document.getElementById('aboutPhilReadMore').addEventListener('click', function() {
-    const more = document.querySelector('.about-phil-more');
-    if (more.hidden) {
-      more.hidden = false;
-      this.textContent = "Read Less";
-    } else {
-      more.hidden = true;
-      this.textContent = "Read More";
-    }
-  });
 
 
 
