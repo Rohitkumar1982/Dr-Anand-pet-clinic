@@ -404,7 +404,7 @@ nav a:focus {
             justify-content: space-between;
             align-items: flex-start;
             padding: 25px 30px;
-            border-bottom: 2px solid #d35400;
+            /* border-bottom: 2px solid #d35400; */
             background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
         }
 
@@ -472,7 +472,7 @@ nav a:focus {
         .philosophy-section {
             padding: 30px 40px;
             background: #fefefe;
-            border-bottom: 2px solid #d35400;
+            /* border-bottom: 2px solid #d35400; */
             min-height: 120px;
             display: flex;
             align-items: center;
