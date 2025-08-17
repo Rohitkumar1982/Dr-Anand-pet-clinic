@@ -295,94 +295,35 @@ if (testimonialSlides.length > 0 && dotsContainer) {
 }
 
 //===============Hits & Tips =====//
-// Image data for each question
-const imageData = {
-  medicine: {
-    caption: "Always consult with a veterinarian before giving any medicine to your pet."
-  },
-  food: {
-    caption: "Proper nutrition with balanced salt and sugar is important for your pet's health."
-  },
-  walking: {
-    caption: "Regular paw checks after walks help prevent infections and injuries."
-  },
-  car: {
-    caption: "Never leave your pet in a closed car - it can be life-threatening."
-  },
-  breeding: {
-    caption: "Consult with a veterinarian to determine the right breeding age for your pet."
-  }
-};
 
 // Function to change image and caption
-function changeImage(imageType) {
-  // Hide all images
-  document.querySelectorAll('.hint-image').forEach(img => {
-    img.classList.remove('active');
-  });
-  
-  // Show selected image
-  const selectedImage = document.getElementById(imageType);
-  if (selectedImage) {
-    selectedImage.classList.add('active');
-  }
-  
-  // Update caption
-  const captionElement = document.getElementById('image-caption-text');
-  if (captionElement && imageData[imageType]) {
-    captionElement.textContent = imageData[imageType].caption;
-  }
-}
-
-// Enhanced hints functionality
-document.querySelectorAll('.hint-question').forEach(button => {
-  button.addEventListener('click', () => {
-    const isExpanded = button.getAttribute('aria-expanded') === 'true';
-    const imageType = button.getAttribute('data-image');
-
-    // Remove active class from all questions
-    document.querySelectorAll('.hint-question').forEach(btn => {
-      btn.classList.remove('active');
-      btn.setAttribute('aria-expanded', 'false');
-      btn.querySelector('.toggle-text').textContent = 'Read More';
-    });
+// Tips section functionality
+document.querySelectorAll('.read-more-btn').forEach(button => {
+  button.addEventListener('click', function() {
+    const targetId = this.getAttribute('data-target');
+    const content = document.getElementById(targetId);
     
-    // Hide all answers
-    document.querySelectorAll('.hint-answer').forEach(ans => {
-      ans.hidden = true;
-    });
-
-    // If clicking on a different question or expanding current one
-    if (!isExpanded) {
-      button.classList.add('active');
-      button.setAttribute('aria-expanded', 'true');
-      button.querySelector('.toggle-text').textContent = 'Read Less';
+    if (content.classList.contains('active')) {
+      content.classList.remove('active');
+      this.textContent = 'Read More';
+    } else {
+      // Close all other tips first
+      document.querySelectorAll('.tip-content').forEach(tip => {
+        tip.classList.remove('active');
+      });
+      document.querySelectorAll('.read-more-btn').forEach(btn => {
+        btn.textContent = 'Read More';
+      });
       
-      const answer = document.getElementById(button.getAttribute('aria-controls'));
-      if (answer) {
-        answer.hidden = false;
-      }
-    }
-
-    // Always change the image when clicking on any question
-    if (imageType) {
-      changeImage(imageType);
-    }
-  });
-
-  // Change image on hover for better UX
-  button.addEventListener('mouseenter', () => {
-    const imageType = button.getAttribute('data-image');
-    if (imageType) {
-      changeImage(imageType);
+      // Open the clicked one
+      content.classList.add('active');
+      this.textContent = 'Read Less';
     }
   });
 });
 
-// Initialize with first question's image
-document.addEventListener('DOMContentLoaded', () => {
-  changeImage('medicine');
-});
+
+
 
 
 
