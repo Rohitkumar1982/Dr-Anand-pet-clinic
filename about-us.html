@@ -1,72 +1,533 @@
-<section class="about-us">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- Header will load here -->
+  <header>
+    <div class="container nav-container">
+      <div class="logo">
+        <img src="img/logo.jpg" alt="Clinic Logo" />
+        <!-- <span>Dr. Anand's Pets Clinic</span> -->
+      </div>
+      
+      <!-- Hamburger menu for mobile -->
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      
+      <nav role="navigation" id="nav-menu">
+        <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="#when-to-visit">When to Visit</a></li>
+        <li><a href="#hints-tips">Hints and Tips</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="/contact-us.html" class="nav-contact-page">Contact Us</a></li>
+      </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Breadcrumb navigation -->
+  <nav aria-label="breadcrumb" class="breadcrumb-nav" style="padding: 10px 10%; font-family: Arial, sans-serif;">
+    <a href="index.html">Home</a> &gt; <span>About Us</span>
+  </nav>
+
+  <!-- About Us Section -->
+  <section class="about-us">
   <div class="about-content">
     <h2>About Us</h2>
     <p>
-      A supportive, calm and understanding veterinarian is akin to a warm blanket. Even when you don't need it, it reminds you of comfort. 
+      A supportive, calm and understanding veterinarian is akin to a warm blanket. Even when you don't need it, it reminds you of comfort.
       Dr. Anand's pet's hospital in West Delhi/NCR is providing such services to its clients since the year 1983.
     </p>
     <p>
-      The care clinic was established to meet the need of veterinary emergencies & critical care for pets. 
-      Being run by a team of essentially experienced veterinary professionals under the inspirational leadership of Dr. R.K Anand, 
+      The care clinic was established to meet the need of veterinary emergencies & critical care for pets.
+      Being run by a team of essentially experienced veterinary professionals under the inspirational leadership of Dr. R.K Anand,
       the center is excellent in its surgical, reproduction and ultrasound support and its recently set critical care unit.
     </p>
     <p>
-      Ably supported by Dr. Gautam Anand, the clinic is flourishing in its service to exclusive beings of God providing uncompromising care 
+      Ably supported by Dr. Gautam Anand, the clinic is flourishing in its service to exclusive beings of God providing uncompromising care
       and assistance to all animals.
     </p>
   </div>
+
 
   <div class="about-image">
     <img src="img/pet-breeding.jpg" alt="Dr. Anand's Pet Hospital">
   </div>
 </section>
 
+  <!-- Footer -->
+  <footer class="site-footer">
+  <div class="footer-inner container">
+    <!-- Left: Logo & Description -->
+    <div class="footer-column footer-brand">
+      <img src="img/logo.jpg" alt="Dr. Anand's Pets Clinic logo" class="footer-logo" />
+      <p class="footer-desc">
+        Dr. Anands Pets clinic is a veterinary hospital<br>
+        with a unique approach to the healthcare<br>
+        of your pet.
+      </p>
+    </div>
+
+    <!-- Center: Vertical Footer Menu -->
+    <nav class="footer-column footer-menu-col" aria-label="Footer menu">
+      <ul class="footer-menu">
+        <li><a href="#services">Services</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="#when-to-visit">When to Visit</a></li>
+        <li><a href="#hints-tips">Hints & Tips</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="/contact-us.html">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <!-- Right: Locations (3 columns) -->
+    <div class="footer-column footer-branches">
+      <div class="footer-branch">
+        <div class="branch-title">Janakpuri Centre</div>
+        <div class="branch-address">
+          C-2-C/132, Pocket 12, Main Road<br>
+          C-2-B to Dabri Mor, Janakpuri,<br>
+          New Delhi - 110 058
+        </div>
+        <div class="branch-contact">
+          <div>Contact Numbers</div>
+          <a href="tel:01125552500" class="branch-phone">011 - 25552500</a>
+        </div>
+      </div>
+      <div class="footer-branch">
+        <div class="branch-title">GK - 1 Centre (South Delhi)</div>
+        <div class="branch-address">
+          R - 21, Basement Greater Kailash - 1,<br>
+          Main MBlock Market Road,<br>
+          New Delhi - 110 048
+        </div>
+        <div class="branch-contact">
+          <div>Contact Numbers</div>
+          <a href="tel:01149901447" class="branch-phone">011 - 49901447</a> /
+          <a href="tel:7042474447" class="branch-phone">7042474447</a>
+        </div>
+      </div>
+      <div class="footer-branch">
+        <div class="branch-title">Vikas Puri Centre</div>
+        <div class="branch-address">
+          56 & 58, 1st Floor, DDA Local Shopping Centre Block - J,<br>
+          Vikas Puri,<br>
+          New Delhi - 110 018
+        </div>
+        <div class="branch-contact">
+          <div>Contact Numbers</div>
+          <a href="tel:01128543773" class="branch-phone">011 - 28543773</a> /
+          <a href="tel:49120170" class="branch-phone">49120170</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    Dr Anands Pets Clinic © 2016 All Rights Reserved
+    <a href="terms.html">Terms of Use</a> and
+    <a href="privacy.html">Privacy Policy</a>
+  </div>
+</footer>
+
+  <!-- Load header and footer fragments -->
+  <script>
+    fetch('header.html')
+  .then(response => response.text())
+  .then(html => document.getElementById('header').innerHTML = html);
+
+fetch('footer.html')
+  .then(response => response.text())
+  .then(html => document.getElementById('footer').innerHTML = html);
+  </script>
+
+</body>
+</html>
+
+
 <style>
-.about-us {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-  padding: 60px 10%;
+/* Reset default margin & padding for body/html */
+.site-footer {
+  background: #f3ecec;
+  color: #fff;
+  font-size: 1rem;
+  border-top: 3px solid #ff6633;
+  margin-top: 36px;
+  padding-top: 0;
 }
 
+.footer-inner {
+  display: flex;
+  justify-content: flex-start;  /* <== Menu stays left! */
+  align-items: flex-start;
+  gap: 32px;
+  /* ... */
+}
+
+/* Left: Logo + Description */
+.footer-brand {
+  flex: 1 1 230px;
+  min-width: 160px;
+  max-width: 235px;
+}
+.footer-logo {
+  width: 51px;
+  margin-bottom: 12px;
+}
+.footer-desc {
+  color: #080707;
+  font-size: 1rem;
+  line-height: 1.5;
+  opacity: 0.96;
+}
+
+/* Center: Vertical Menu */
+.footer-menu-col {
+  flex: 0 0 170px;       /* Do NOT let it grow */
+  min-width: 120px;
+  text-align: left;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  align-items: flex-start;  /* If it's a flex container */
+  justify-content: flex-start;
+}
+
+.footer-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: block;            /* Ensures vertical menu */
+  text-align: left;
+}
+.footer-menu li {
+  margin-bottom: 11px;
+}
+.footer-menu li:last-child {
+  margin-bottom: 0;
+}
+.footer-menu a {
+  color: #080707;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0;
+  transition: color 0.2s;
+  display: block;
+}
+.footer-menu a:hover,
+.footer-menu a:focus {
+  color: #ff6633;
+  text-decoration: none;
+  outline: none;
+}
+
+/* Right: 3-Columns Branches */
+.footer-branches {
+  display: flex;
+  flex-direction: row;   /* <== MOST IMPORTANT: always row by default */
+  gap: 28px;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-wrap: nowrap;     /* <== PREVENT WRAPPING on desktop! */
+  width: 100%;
+}
+.footer-branch {
+  min-width: 0;
+  max-width: 240px;
+  flex: 1 1 0;   /* <== Make each branch share a third of the row */
+  margin-bottom: 0;
+}
+.branch-title {
+  font-weight: 700;
+  font-size: 1.07rem;
+  color: #0e0c0b;
+  margin-bottom: 2px;
+}
+.branch-address {
+  color: #0e0c0b;
+  margin-bottom: 6px;
+  font-size: 0.97rem;
+  line-height: 1.35;
+}
+.branch-contact {
+  font-size: 0.97rem;
+  margin-bottom: 0;
+}
+.branch-contact div {
+  color: #0e0c0b;
+  font-size: 0.93rem;
+  font-weight: 400;
+  margin-bottom: 2px;
+}
+.branch-phone {
+  color: #ff6633;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.01rem;
+}
+.branch-phone:hover,
+.branch-phone:focus {
+  color: #f56363;
+  text-decoration: none;
+  outline: none;
+}
+
+/* Bottom line */
+.footer-bottom {
+  border-top: 1.5px solid #292929;
+  text-align: center;
+  font-size: 1rem;
+  color: #aaa;
+  margin-top: 28px;
+  padding: 16px 0 16px 0;
+}
+.footer-bottom a {
+  color: #ff6633;
+  margin: 0 2px;
+  text-decoration: none;
+  font-weight: 500;
+}
+.footer-bottom a:hover,
+.footer-bottom a:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .footer-inner {
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+  .footer-branches {
+    gap: 18px;
+  }
+}
+@media (max-width: 800px) {
+  .footer-inner {
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+  }
+  .footer-branches {
+    flex-direction: column;
+    gap: 11px;
+    width: 100%;
+  }
+  .footer-branch {
+    min-width: 0;
+    max-width: 100vw;
+  }
+  .footer-menu-col {
+    min-width: 0;
+    margin-bottom: 0;
+    margin-top: 8px;
+  }
+}
+@media (max-width: 530px) {
+  .footer-inner,
+  .footer-branches {
+    gap: 10px;
+  }
+  .footer-logo {
+    width: 38px;
+  }
+  .footer-branch {
+    font-size: 0.97rem;
+  }
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Container styling for About Us */
+.about-us {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px 10% 60px 10%;
+  align-items: flex-start; /* Align content top */
+  box-sizing: border-box;
+  min-height: 300px; /* Optional: set min height */
+}
+
+/* Left side: text content */
 .about-content {
-  flex: 1;
-  font-family: Arial, sans-serif;
+  flex: 1 1 50%;
+  min-width: 280px;
+  box-sizing: border-box;
+  margin: 0; /* Remove extra margin */
+  gap: 0;
 }
 
 .about-content h2 {
   font-size: 32px;
-  margin-bottom: 20px;
+  margin: 0 0 20px 0; /* Remove any top margin, keep bottom spacing */
   color: #333;
 }
 
 .about-content p {
-  margin-bottom: 16px;
+  margin: 0 0 16px 0;
   line-height: 1.6;
   color: #555;
 }
 
+/* Right side: image */
 .about-image {
-  flex: 1;
+  flex: 1 1 50%;
+  min-width: 280px;
   display: flex;
   justify-content: center;
+  align-items: flex-start; /* Align top for image */
+  box-sizing: border-box;
+  margin: 0; /* Remove extra margin */
 }
 
 .about-image img {
   max-width: 100%;
   border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  height: auto;
 }
 
-/* Responsive */
+/* Responsive: stack vertically on smaller screens */
 @media (max-width: 900px) {
   .about-us {
     flex-direction: column;
+    padding: 30px 10%;
     text-align: center;
+  }
+  .about-content, .about-image {
+    flex: none;
+    min-width: 100%;
+    margin: 0 auto;
   }
   .about-image {
     margin-top: 20px;
   }
+  header {
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  position: relative;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #234e70;
+}
+
+.logo img {
+  height: 48px;
+  width: auto;
+}
+
+/* Navigation - Desktop */
+nav ul {
+  display: flex;
+  gap: 1.8rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #234e70;
+  padding: 8px 5px;
+  display: inline-block;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #ff6633;
+  outline: none;
+}
+
+/* Hamburger Menu - Hidden on Desktop */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 5px;
+  z-index: 101;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #234e70;
+  margin: 3px 0;
+  transition: 0.3s;
+}
+/* bread crumbing*/
+.breadcrumb-nav {
+  font-family: Arial, sans-serif;
+  padding: 10px 10%;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  font-size: 0.9rem;
+  color: #234e70;
+  user-select: none;
+}
+
+.breadcrumb-nav a {
+  color: #ff6633;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.breadcrumb-nav a:hover,
+.breadcrumb-nav a:focus {
+  color: #e15319;
+  outline: none;
+  text-decoration: underline;
+}
+
+.breadcrumb-nav span {
+  color: #555;
+  font-weight: 400;
+}
+
+.breadcrumb-nav a::after {
+  content: "›"; /* Angle bracket separator */
+  margin: 0 8px;
+  color: #999;
+}
+
+.breadcrumb-nav a:last-child::after {
+  content: "";
+  margin: 0;
+}
+
+}
+
 </style>
+
