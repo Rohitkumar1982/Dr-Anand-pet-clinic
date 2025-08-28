@@ -513,7 +513,7 @@ nav a:focus {
 
         .contact-block {
             flex: 1;
-            padding: 0 15px;
+            padding: 0 1px;
             font-size: 13px;
             line-height: 1.6;
             min-width: 0;
@@ -627,7 +627,7 @@ nav a:focus {
     border-bottom: none;
     border-right: 1px solid #d35400;
     padding-bottom: 0;
-    padding-right: 10px;
+    /* padding-right: 10px; */
     font-size: 11px;
   }
   .contact-block:last-child {
@@ -680,8 +680,8 @@ nav a:focus {
   }
   .contact-block {
     min-width: 85px;
-    font-size: 9px;
-    padding-right: 4px;
+    font-size: 8px;
+    padding-right: 0px;
   }
 }
 
