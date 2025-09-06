@@ -44,14 +44,63 @@ function toggleMenu() {
   const nav = document.getElementById('nav-menu');
   nav.classList.toggle('active');
 }
+// ========= MOBILE HEADER NAVIGATION =========
+function toggleMenu() {
+            const nav = document.getElementById('nav-menu');
+            const hamburger = document.getElementById('hamburger');
+            const backdrop = document.getElementById('mobile-backdrop');
+            
+            nav.classList.toggle('active');
+            hamburger.classList.toggle('active');
+            backdrop.classList.toggle('active');
+        }
 
-// Close menu when clicking on a link (mobile)
-document.querySelectorAll('nav a').forEach(link => {
-  link.addEventListener('click', () => {
-    const nav = document.getElementById('nav-menu');
-    nav.classList.remove('active');
-  });
-});
+        function toggleDropdown(button) {
+            // Only work on mobile
+            if (window.innerWidth <= 768) {
+                const dropdown = button.parentElement.querySelector('ul');
+                const icon = button.querySelector('i');
+                
+                dropdown.classList.toggle('active');
+                button.classList.toggle('active');
+            }
+        }
+
+        // Close menu when clicking on a link (mobile)
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768 && !link.parentElement.classList.contains('has-dropdown')) {
+                    const nav = document.getElementById('nav-menu');
+                    const hamburger = document.getElementById('hamburger');
+                    const backdrop = document.getElementById('mobile-backdrop');
+                    
+                    nav.classList.remove('active');
+                    hamburger.classList.remove('active');
+                    backdrop.classList.remove('active');
+                }
+            });
+        });
+
+        // Hide mobile menu on resize to desktop
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                const nav = document.getElementById('nav-menu');
+                const hamburger = document.getElementById('hamburger');
+                const backdrop = document.getElementById('mobile-backdrop');
+                
+                nav.classList.remove('active');
+                hamburger.classList.remove('active');
+                backdrop.classList.remove('active');
+                
+                // Reset mobile dropdowns
+                document.querySelectorAll('.dropdown-toggle').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                document.querySelectorAll('nav ul ul').forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                });
+            }
+        });
 
 
 

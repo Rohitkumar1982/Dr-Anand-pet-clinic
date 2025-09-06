@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Dr. Anand's Pets Clinic</title>
-    
+    <title>Gallery | Dr. Anand's Pets Clinic</title>
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
     
@@ -199,47 +199,35 @@
         .breadcrumb a:hover {
             text-decoration: underline;
         }
+        /* PHOTO GALLERY */
+.photo-gallery {
+  padding: 54px 0;
+}
+.photo-gallery h2 {
+  text-align: center;
+  margin-bottom: 42px;
+  font-size: 2.2rem;
+  color: #234e70;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.gallery-grid img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
 
-        /* ABOUT US SECTION */
-        .about-section {
-            padding: 60px 0;
-        }
-
-        .about-content {
-            display: flex;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .about-text {
-            flex: 1;
-        }
-
-        .about-text h1 {
-            font-size: 2.5rem;
-            color: #234e70;
-            margin-bottom: 30px;
-            font-weight: 700;
-        }
-
-        .about-text p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: #555;
-            margin-bottom: 20px;
-        }
-
-        .about-image {
-            flex: 1;
-            text-align: center;
-        }
-
-        .about-image img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-        }
 
         /* FOOTER */
         .site-footer {
@@ -413,16 +401,6 @@
                 grid-template-columns: 1fr;
             }
 
-            .about-content {
-                flex-direction: column;
-                gap: 40px;
-                text-align: center;
-            }
-
-            .about-text h1 {
-                font-size: 2rem;
-            }
-
             .footer-content {
                 grid-template-columns: 1fr;
                 gap: 30px;
@@ -507,15 +485,6 @@
     }
         }
 
-        @media (max-width: 480px) {
-            .about-text h1 {
-                font-size: 1.8rem;
-            }
-
-            .about-text p {
-                font-size: 1rem;
-            }
-        }
     </style>
 </head>
 <body>
@@ -571,35 +540,26 @@
 
     <div class="breadcrumb">
         <div class="container">
-            <a href="index.html">Home</a> &gt; <span>About Us</span>
+            <a href="index.html">Home</a> &gt; <span>Gallery</span>
         </div>
     </div>
-
-    <section class="about-section">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h1>About Us</h1>
-                    <p>
-                        A supportive, calm and understanding veterinarian is akin to a warm blanket. Even when you don't need it, it reminds you of comfort.
-                        Dr. Anand's pet's hospital in West Delhi/NCR is providing such services to its clients since the year 1983.
-                    </p>
-                    <p>
-                        The care hospital was established to meet the need of veterinary emergencies & critical care for pets.
-                        Being run by a team of essentially experienced veterinary professionals under the inspirational leadership of Dr. R.K Anand,
-                        the center is excellent in its surgical, reproduction and ultrasound support and its recently set critical care unit.
-                    </p>
-                    <p>
-                        Ably supported by Dr. Gautam Anand, the hospital is flourishing in its service to exclusive beings of God providing uncompromising care
-                        and assistance to all animals.
-                    </p>
-                </div>
-                <div class="about-image">
-                    <img src="img/Dogwithdocs.jpeg" alt="Dr. Anand's Pet Hospital with a happy dog">
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Photo Gallery -->
+  <section class="photo-gallery container">
+    <h2>Photo Gallery</h2>
+    <div class="gallery-grid">
+      <img src="img/pet-breeding.jpg" alt="Pet photo 1" />
+      <img src="img/pet-car-safety.jpg" alt="Pet photo 2" />
+      <img src="img/pet-medicine.jpg" alt="Pet photo 3" />
+      <img src="img/pet-food.jpg" alt="Pet photo 4" />
+      <img src="img/pet-walking.jpg" alt="Pet photo 5" />
+      <img src="img/dog-bath.jpg" alt="Pet photo 6" />
+      <img src="img/dog-consult.jpg" alt="Pet photo 7" />
+      <img src="img/dog-play.jpg" alt="Pet photo 8" />
+      <img src="img/cat-sleep.jpg" alt="Pet photo 9" />
+      <img src="img/cat-play.jpg" alt="Pet photo 10" />
+      <!-- Add more photos -->
+    </div>
+  </section>
 
     <footer class="site-footer">
         <div class="container">

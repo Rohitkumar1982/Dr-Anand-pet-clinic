@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Dr. Anand's Pets Clinic</title>
-    
+    <title>Contact Us | Dr. Anand's Pets Clinic</title>
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
     
@@ -199,47 +199,133 @@
         .breadcrumb a:hover {
             text-decoration: underline;
         }
+        /* EXPERIENCE STATS */
+.experience-stats-wrapper {
+  background-color: #f6efea;
+  padding: 60px 0;
+}
+.experience-stats-content {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.stats-numbers {
+  flex: 1 1 600px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 26px 45px;
+}
+.stat-card {
+  background: white;
+  border-radius: 14px;
+  padding: 40px 25px;
+  box-shadow: 0 12px 20px rgb(35 78 112 / 8%);
+  text-align: center;
+}
+.stat-icon-container {
+  width: 58px;
+  height: 58px;
+  background: #fff4ed;
+  border-radius: 13px;
+  margin: 0 auto 14px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ff6633;
+  font-size: 1.9rem;
+}
+.stat-card h3 {
+  color: #ff6633;
+  font-weight: 900;
+  font-size: 2.7rem;
+  margin: 0 0 8px 0;
+}
+.stat-card p {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #234e70;
+  margin: 0;
+}
+.booking-form-container {
+  flex: 1 1 480px;
+  max-width: 480px;
+  padding: 44px 48px 36px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 12px 40px rgb(35 78 112 / 11%);
+}
+.booking-form-container h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 32px;
+  color: #234e70;
+}
+.booking-form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.booking-form-container input,
+.booking-form-container select {
+  padding: 14px 18px;
+  border-radius: 12px;
+  border: 1.3px solid #d4e3e3;
+  font-family: inherit;
+  font-size: 1rem;
+}
+.btn-form-submit {
+  background-color: #ff6633;
+  color: white;
+  font-weight: 700;
+  font-size: 1.15rem;
+  border-radius: 30px;
+  padding: 16px 0;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.btn-form-submit:hover,
+.btn-form-submit:focus {
+  background-color: #e1531a;
+}
+.form-response {
+  font-weight: 600;
+  color: #229964;
+  margin-top: 14px;
+  min-height: 24px;
+  font-size: 1rem;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .experience-stats-content {
+    flex-direction: column;
+    gap: 44px;
+    align-items: center;
+  }
+  .stats-numbers {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .booking-form-container {
+    max-width: 100%;
+  }
+  .experience-stats-wrapper {
+     padding: 40px 0;
+    overflow-x: hidden;
 
-        /* ABOUT US SECTION */
-        .about-section {
-            padding: 60px 0;
-        }
+  }
+}
+@media (max-width: 550px) {
+  .stats-numbers {
+    grid-template-columns: 1fr;
+    gap: 24px 0;
+  }
+}
 
-        .about-content {
-            display: flex;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .about-text {
-            flex: 1;
-        }
-
-        .about-text h1 {
-            font-size: 2.5rem;
-            color: #234e70;
-            margin-bottom: 30px;
-            font-weight: 700;
-        }
-
-        .about-text p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: #555;
-            margin-bottom: 20px;
-        }
-
-        .about-image {
-            flex: 1;
-            text-align: center;
-        }
-
-        .about-image img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-        }
 
         /* FOOTER */
         .site-footer {
@@ -413,16 +499,6 @@
                 grid-template-columns: 1fr;
             }
 
-            .about-content {
-                flex-direction: column;
-                gap: 40px;
-                text-align: center;
-            }
-
-            .about-text h1 {
-                font-size: 2rem;
-            }
-
             .footer-content {
                 grid-template-columns: 1fr;
                 gap: 30px;
@@ -507,15 +583,6 @@
     }
         }
 
-        @media (max-width: 480px) {
-            .about-text h1 {
-                font-size: 1.8rem;
-            }
-
-            .about-text p {
-                font-size: 1rem;
-            }
-        }
     </style>
 </head>
 <body>
@@ -571,35 +638,59 @@
 
     <div class="breadcrumb">
         <div class="container">
-            <a href="index.html">Home</a> &gt; <span>About Us</span>
+            <a href="index.html">Home</a> &gt; <span>Contact Us</span>
         </div>
     </div>
-
-    <section class="about-section">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h1>About Us</h1>
-                    <p>
-                        A supportive, calm and understanding veterinarian is akin to a warm blanket. Even when you don't need it, it reminds you of comfort.
-                        Dr. Anand's pet's hospital in West Delhi/NCR is providing such services to its clients since the year 1983.
-                    </p>
-                    <p>
-                        The care hospital was established to meet the need of veterinary emergencies & critical care for pets.
-                        Being run by a team of essentially experienced veterinary professionals under the inspirational leadership of Dr. R.K Anand,
-                        the center is excellent in its surgical, reproduction and ultrasound support and its recently set critical care unit.
-                    </p>
-                    <p>
-                        Ably supported by Dr. Gautam Anand, the hospital is flourishing in its service to exclusive beings of God providing uncompromising care
-                        and assistance to all animals.
-                    </p>
-                </div>
-                <div class="about-image">
-                    <img src="img/Dogwithdocs.jpeg" alt="Dr. Anand's Pet Hospital with a happy dog">
-                </div>
-            </div>
+    <!-- Experience Stats with Background & Form -->
+  <section class="experience-stats-wrapper" style="background-color:#f6efea;padding:60px 0;" id="contact-form">
+  <div class="container experience-stats-content">
+    <div class="stats-numbers">
+      <div class="stat-card">
+        <div class="stat-icon-container">
+          <i class="fa-regular fa-calendar-days"></i>
         </div>
-    </section>
+        <h3 class="stat-number" data-target="70" data-plus="true">0</h3>
+        <p>Years of operations</p>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon-container">
+          <i class="fa-solid fa-hospital"></i>
+        </div>
+        <h3 class="stat-number" data-target="15">0</h3>
+        <p>Hospitals and clinics</p>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon-container">
+          <i class="fa-solid fa-users"></i>
+        </div>
+        <h3 class="stat-number" data-target="50" data-plus="true">0</h3>
+        <p>Number of Pets</p>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon-container">
+          <i class="fa-solid fa-user-doctor"></i>
+        </div>
+        <h3 class="stat-number" data-target="250" data-plus="true">0</h3>
+        <p>Combined years of experience</p>
+      </div>
+    </div>
+    <div class="booking-form-container">
+      <h3>Book an Appointment</h3>
+      <form id="experience-booking-form">
+        <input type="text" name="name" placeholder="Full Name" required autocomplete="name" />
+        <input type="tel" name="phone" placeholder="Phone No." required pattern="[0-9]{10}" autocomplete="tel" />
+        <select name="location" required>
+          <option value="" disabled selected>Prefer location</option>
+          <option value="Vikas Puri">Vikas Puri</option>
+          <option value="Janakpuri">Janakpuri</option>
+          <option value="GK-1">GK-1 (South Delhi)</option>
+        </select>
+        <button type="submit" class="btn btn-form-submit">Book Appointment</button>
+        <p id="booking-response" class="form-response"></p>
+      </form>
+    </div>
+  </div>
+</section>
 
     <footer class="site-footer">
         <div class="container">
@@ -752,6 +843,60 @@ window.addEventListener('resize', function() {
         });
     }
 });
+// ========= BOOKING FORM SUBMIT =========
+const bookingForm = document.getElementById("experience-booking-form");
+const bookingResponse = document.getElementById("booking-response");
+if (bookingForm && bookingResponse) {
+  bookingForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const name = bookingForm.name.value.trim();
+    const phone = bookingForm.phone.value.trim();
+    const location = bookingForm.location.value;
+    if (!name || !phone || !location) {
+      bookingResponse.textContent = "Please fill all required fields.";
+      bookingResponse.style.color = "red";
+      return;
+    }
+    bookingResponse.style.color = "#229964";
+    bookingResponse.textContent = "Sending your booking request...";
+    setTimeout(() => {
+      bookingResponse.textContent = "Your booking request has been sent successfully!";
+      bookingForm.reset();
+    }, 1800);
+  });
+}
+
+
+// ========= ANIMATED STATS NUMBERS =========
+function animateNumbersWithPlus() {
+  document.querySelectorAll('.stat-number').forEach(el => {
+    const target = +el.getAttribute('data-target');
+    const showPlus = el.dataset.plus === "true";
+    let curr = 0;
+    const increment = Math.ceil(target / 50);
+    function update() {
+      curr += increment;
+      if (curr >= target) {
+        el.textContent = target + (showPlus ? '+' : '');
+      } else {
+        el.textContent = curr + (showPlus ? '+' : '');
+        requestAnimationFrame(update);
+      }
+    }
+    update();
+  });
+}
+function onScrollStatAppearWithPlus() {
+  const statsSection = document.querySelector('.experience-stats-wrapper');
+  if (!statsSection) return;
+  const rect = statsSection.getBoundingClientRect();
+  if (rect.top < window.innerHeight && rect.bottom > 0) {
+    animateNumbersWithPlus();
+    window.removeEventListener('scroll', onScrollStatAppearWithPlus);
+  }
+}
+window.addEventListener('scroll', onScrollStatAppearWithPlus);
+onScrollStatAppearWithPlus();
 </script>
 
 </body>

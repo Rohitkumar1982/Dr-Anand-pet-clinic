@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Dr. Anand's Pets Clinic</title>
-    
+    <title>Hints & Tips | Dr. Anand's Pets Clinic</title>
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
     
@@ -199,47 +199,104 @@
         .breadcrumb a:hover {
             text-decoration: underline;
         }
+        /* PET TIPS SECTION */
+.pet-tips-section {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #fbfbfa;
+    padding: 3rem 0;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.11);
+    margin: 2rem 0;
+}
+.pet-tips-container {
+    max-width: 830px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 18px rgba(60,60,80,0.09);
+    padding: 2.5rem 2rem 2.5rem 2rem;
+}
+.tips-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #273451;
+    margin-bottom: 0.4rem;
+}
+.tips-subtitle {
+    text-align: center;
+    color: #c09d54;
+    font-size: 1.14rem;
+    font-style: italic;
+    letter-spacing: 0.7px;
+    margin-bottom: 1.7rem;
+}
+.tips-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.tips-list li {
+    position: relative;
+    color: #495370;
+    font-size: 1.08rem;
+    background: #f9f9f6;
+    border-radius: 10px;
+    padding: 0.83em 1.15em 0.83em 3em;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 10px rgba(220, 180, 80, 0.05);
+    transition: background 0.15s;
+    min-height: 2.2em;
+    display: flex;
+    align-items: center;
+}
+.tips-list li:last-child { margin-bottom: 0; }
+.tips-list li:hover { background: #fcf8ee; }
+.tips-list .hint::before,
+.tips-list .tip::before {
+    position: absolute;
+    left: 7px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.31em;
+    font-weight: bold;
+    background: #fff;
+    border-radius: 50%;
+    width: 1.6em;
+    height: 1.6em;
+    line-height: 1.5em;
+    text-align: center;
+    box-shadow: 0 1px 6px rgba(200,200,160,0.09);
+    display: inline-block;
+}
+.tips-list .hint::before {
+    content: '\2716';
+    color: #cb3234;
+    border: 1.5px solid #f7c7c6;
+}
+.tips-list .tip::before {
+    content: '\2714';
+    color: #4bb543;
+    border: 1.5px solid #b5e9b2;
+}
+@media (max-width: 700px) {
+    .pet-tips-container {
+        padding: 1rem 0.5rem;
+        border-radius: 8px;
+    }
+    .tips-title { font-size: 1.31rem; }
+    .tips-list li { font-size: 1rem; padding-left: 2.6em; }
+    .tips-list .hint::before, .tips-list .tip::before {
+        left: 0.55em;
+        font-size: 1.09em;
+        width: 1.3em;
+        height: 1.3em;
+    }
+}
 
-        /* ABOUT US SECTION */
-        .about-section {
-            padding: 60px 0;
-        }
 
-        .about-content {
-            display: flex;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .about-text {
-            flex: 1;
-        }
-
-        .about-text h1 {
-            font-size: 2.5rem;
-            color: #234e70;
-            margin-bottom: 30px;
-            font-weight: 700;
-        }
-
-        .about-text p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: #555;
-            margin-bottom: 20px;
-        }
-
-        .about-image {
-            flex: 1;
-            text-align: center;
-        }
-
-        .about-image img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-        }
 
         /* FOOTER */
         .site-footer {
@@ -413,16 +470,6 @@
                 grid-template-columns: 1fr;
             }
 
-            .about-content {
-                flex-direction: column;
-                gap: 40px;
-                text-align: center;
-            }
-
-            .about-text h1 {
-                font-size: 2rem;
-            }
-
             .footer-content {
                 grid-template-columns: 1fr;
                 gap: 30px;
@@ -507,15 +554,6 @@
     }
         }
 
-        @media (max-width: 480px) {
-            .about-text h1 {
-                font-size: 1.8rem;
-            }
-
-            .about-text p {
-                font-size: 1rem;
-            }
-        }
     </style>
 </head>
 <body>
@@ -571,35 +609,40 @@
 
     <div class="breadcrumb">
         <div class="container">
-            <a href="index.html">Home</a> &gt; <span>About Us</span>
+            <a href="index.html">Home</a> &gt; <span>Hints and Tips</span>
         </div>
     </div>
-
-    <section class="about-section">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h1>About Us</h1>
-                    <p>
-                        A supportive, calm and understanding veterinarian is akin to a warm blanket. Even when you don't need it, it reminds you of comfort.
-                        Dr. Anand's pet's hospital in West Delhi/NCR is providing such services to its clients since the year 1983.
-                    </p>
-                    <p>
-                        The care hospital was established to meet the need of veterinary emergencies & critical care for pets.
-                        Being run by a team of essentially experienced veterinary professionals under the inspirational leadership of Dr. R.K Anand,
-                        the center is excellent in its surgical, reproduction and ultrasound support and its recently set critical care unit.
-                    </p>
-                    <p>
-                        Ably supported by Dr. Gautam Anand, the hospital is flourishing in its service to exclusive beings of God providing uncompromising care
-                        and assistance to all animals.
-                    </p>
-                </div>
-                <div class="about-image">
-                    <img src="img/Dogwithdocs.jpeg" alt="Dr. Anand's Pet Hospital with a happy dog">
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="pet-tips-section">
+  <div class="pet-tips-container">
+    <h2 class="tips-title">Few Useful Hints &amp; Tips For Pet Owners</h2>
+    <div class="tips-subtitle">Pet Care Tips for a healthy pet</div>
+    <ul class="tips-list">
+      <!-- Hints (Cross) -->
+      <li class="hint">No medicine to be given to the pet without prior consultation as certain human medicines are contraindicated in pets.</li>
+      <!-- Tips (Tick) -->
+      <li class="tip">Salt and sugar in moderate quantities can be added to the diet of a dog. Not feeding sugar and salt is a myth.</li>
+      <li class="tip">After coming back from a walk, a dog should be checked at all paws for the presence of any foreign body.</li>
+      <li class="hint">Do not buy or acquire a pup of less than 5 weeks of age.</li>
+      <li class="hint">Do not keep a newly acquired pup on the floor. Keep him/her on some kind of bedding in a box or basket.</li>
+      <li class="tip">The pup should be combed and brushed every day and pets talc baby powder or coat care deodorant may be used for cleanliness and fragrance. Frequent bathing of the dog is not recommended.</li>
+      <li class="tip">Always feed the pup with Luke Warm feed, fresh each time.</li>
+      <li class="hint">Never leave your dog in a closed car with windows rolled up. Dogs can't stand the greenhouse effect and the heat and they might collapse with a heat stroke.</li>
+      <li class="hint">Pups normally do not drink water, so do not force water into the pup’s feed.</li>
+      <li class="hint">In young pups, diarrhoea or vomiting needs immediate Vet attention.</li>
+      <li class="tip">Minced meat could be introduced to pups at 3 months of age.</li>
+      <li class="tip">Dog's normal body temperature is 101 degree and 102 degree F.</li>
+      <li class="tip">Dogs should be trained from the early age for going out for big and small jobs. Make it a practice to move him out at a regular spot after every meal.</li>
+      <li class="tip">Call your dog by name each time so that it responds and recognises the name quickly.</li>
+      <li class="tip">A dog is considered to be mature at 1 to 1.5 years of age for breeding. A bitch should not be mated on 1st heat.</li>
+      <li class="tip">The heat in bitches lasts for about 21 days. She goes through a menstrual cycle which lasts about 5-10 days.</li>
+      <li class="tip">The bitch could be mated successfully between 8-12 days in small breeds and 10-14 days in large breeds from the onset of bleeding.</li>
+      <li class="tip">The gestation period pregnancy in bitches is between 58 days to 62 days.</li>
+      <li class="hint">Chaining of dogs make them furious, therefore do not chain them at all times.</li>
+      <li class="tip">All dogs need regular exercise, good food and hygienic living conditions and above all, little love and affection by the owner.</li>
+      <li class="hint">Dog training by professional trainer should not start prior to 4 months of age.</li>
+    </ul>
+  </div>
+</section>
 
     <footer class="site-footer">
         <div class="container">

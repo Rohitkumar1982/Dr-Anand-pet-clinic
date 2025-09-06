@@ -40,7 +40,7 @@
             <!-- Right Doctor with Logo -->
             <div class="doctor-right">
                 <div class="logo-container">
-                    <img src="img/logo.jpg" alt="Dr. Gautam Anand's Logo" />
+                    <img src="img/logo1.jpeg" alt="Dr. Gautam Anand's Logo" />
                 </div>
                 <div class="doctor-info">
                     <strong>Dr. Gautam Anand</strong><br>
@@ -99,32 +99,67 @@
         </div>
     </div>
 
-  <header>
-    <div class="container nav-container">
-      <div class="logo">
-        <!-- <img src="img/logo.jpg" /> -->
-        <!-- <span>Dr. Anand's Pets Clinic</span> -->
-      </div>
-      
-      <!-- Hamburger menu for mobile -->
-      <div class="hamburger" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      
-      <nav role="navigation" id="nav-menu">
-        <ul>
-        <li><a href="#services">Services</a></li>
-        <li><a href="about-us.html">About Us</a></li>
-        <li><a href="#when-to-visit">When to Visit</a></li>
-        <li><a href="#hints-tips">Hints and Tips</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="/contact-us.html" class="nav-contact-page">Contact Us</a></li>
-      </ul>
-      </nav>
-    </div>
-  </header>
+  <!-- <div class="mobile-backdrop" id="mobile-backdrop" onclick="toggleMenu()"></div> -->
+
+    <header>
+        <div class="container nav-container">
+            <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <nav role="navigation" id="nav-menu">
+                <button class="close-btn" onclick="toggleMenu()">
+                    <i class="fas fa-times"></i>
+                </button>
+                
+                <ul>
+                    <li class="has-dropdown">
+                        <a href="#services">Services</a>
+                        <button class="dropdown-toggle" onclick="toggleDropdown(this)">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <ul class="services-dropdown">
+                            <li><a href="#">Infertility Treatment</a></li>
+                            <li><a href="#">Vaccinations</a></li>
+                            <li><a href="#">Hair Care</a></li>
+                            <li><a href="#">ICU</a></li>
+                            <li><a href="#">CCU</a></li>
+                            <li><a href="#">Related Articles</a></li>
+                            <li><a href="#">Echocardiogram</a></li>
+                            <li><a href="#">Color Doppler Ultrasound</a></li>
+                            <li><a href="#">Digital X-Ray</a></li>
+                            <li><a href="#">Fully Equipped OT</a></li>
+                            <li><a href="#">Eye Consults</a></li>
+                            <li><a href="#">Skin Consults</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li class="has-dropdown">
+                        <a href="#when-to-visit">When to Visit</a>
+                        <button class="dropdown-toggle" onclick="toggleDropdown(this)">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <ul class="single-dropdown">
+                            <li><a href="#">Symptoms of Common Ailments</a></li>
+                            <li><a href="regular-check.html">Regular Check Based Issues</a></li>
+                            <li><a href="#">Deadly Viral Diseases</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="hints&tips.html">Hints and Tips</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact-us.html" class="nav-contact-page">Contact Us</a></li>
+                    
+                    <li class="phone">
+                        <a href="tel:+919876543210">
+                            <i class="fas fa-phone"></i> +91 98765 43210
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
   <!-- Hero Banner Carousel -->
   <section class="hero" id="home" aria-label="Hero banner carousel">
@@ -133,7 +168,7 @@
       <img src="img/Dog.jpeg" alt="Happy pets" />
       <div class="hero-content">
         <h1>We really care about your pet's welfare!</h1>
-        <p>Dr. Anand's Pets Clinic is a veterinary hospital with a unique approach to your pet's healthcare.</p>
+        <p>Dr. Anand's Pets Hospital is a veterinary hospital with a unique approach to your pet's healthcare.</p>
         <a href="tel:+919810167060" class="btn btn-hero-book" aria-label="Book appointment for We really care about your pet's welfare">Book Appointment</a>
       </div>
     </div>
@@ -141,14 +176,14 @@
     <div class="carousel-slide" data-slide-index="1" tabindex="-1" aria-hidden="true">
       <img src="img/Cat.jpeg" alt="Clinic care" />
       <div class="hero-content">
-        <h1>24-Hours Emergency Vet Clinic</h1>
+        <h1>24-Hours Emergency Vet Hospital</h1>
         <p>Your pet's health is our life's mission. Immediate care, modern facilities.</p>
         <a href="tel:+919810167060" class="btn btn-hero-book" aria-label="Book appointment for 24-Hours Emergency Vet Clinic">Book Appointment</a>
       </div>
     </div>
 
     <div class="carousel-slide" data-slide-index="2" tabindex="-1" aria-hidden="true">
-      <img src="img/pets.png" alt="Pet diagnostics" />
+      <img src="img/pets.jpg" alt="Pet diagnostics" />
       <div class="hero-content">
         <h1>Comprehensive Services</h1>
         <p>Diagnostics, Surgery, Vaccination, Grooming, and more—all under one roof.</p>
@@ -191,7 +226,7 @@
     <div class="about-text">
       <h2>About Us</h2>
       <p>
-        A supportive, calm and understanding veterinarian is akin to a warm blanket. Even when you don't need it, it reminds you of comfort. Dr. Anand's pet's hospital in West Delhi/NCR is providing such services to its clients since the year 1983. The care clinic was established to meet the need of veterinary emergencies & critical care for pets Being run by a team of essentially experienced veterinary professionals under the inspirational leadership of Dr. R.K Anand, the center is excellent in its surgical, reproduction and ultrasound support and its recently set critical care unit. Ably supported by Dr. Gautam Anand, the clinic is flourishing in its service to exclusive beings of God providing uncompromising care and assistance to all animals.
+        A supportive, calm and understanding veterinarian is akin to a warm blanket. Even when you don't need it, it reminds you of comfort. Dr. Anand's pet's hospital in West Delhi/NCR is providing such services to its clients since the year 1983. The care Hospital was established to meet the need of veterinary emergencies & critical care for pets Being run by a team of essentially experienced veterinary professionals under the inspirational leadership of Dr. R.K Anand, the center is excellent in its surgical, reproduction and ultrasound support and its recently set critical care unit. Ably supported by Dr. Gautam Anand, the hospital is flourishing in its service to exclusive beings of God providing uncompromising care and assistance to all animals.
       </p>
       <a href="about-us.html" class="btn btn-readmore" aria-label="Read more about Dr. Anand's Pets Clinic">Read More</a>
     </div>
@@ -240,7 +275,7 @@
           <i class="fa fa-wallet"></i>
           <h3>AFFORDABLE SERVICES</h3>
           <p>
-            Whether it’s puppy first vaccination or a wellness checkup for your newly adopted senior cat, Dog & Clinic is dedicated to offering a full range of services at fair prices.
+            Whether it’s puppy first vaccination or a wellness checkup for your newly adopted senior cat, Dog & hospital is dedicated to offering a full range of services at fair prices.
           </p>
         </div>
         <div class="reason-box">
@@ -305,7 +340,7 @@
 
   <!-- Pet Healthcare Service Section -->
   <section class="pet-healthcare container">
-    <h2>Pet Healthcare Service at Dr. Anand’s Pet’s Clinic</h2>
+    <h2>Pet Healthcare Service at Dr. Anand’s Pet’s Hospital</h2>
     <div class="service-list">
   <div class="service-item">
     <i class="fa-solid fa-user-md"></i>
@@ -446,12 +481,12 @@
 </section>
 
   <!-- Free Consultation Section -->
-  <section class="free-consultation" style="background-color:#FF6633;">
+  <!-- <section class="free-consultation" style="background-color:#FF6633;">
     <div class="container free-consultation-content">
       <h2>First time? Get your free consultation on us!</h2>
       <a href="tel:+919810167060" class="btn btn-consultation">Book Appointment</a>
     </div>
-  </section>
+  </section> -->
 
   <!-- Experience Stats with Background & Form -->
   <section class="experience-stats-wrapper" style="background-color:#f6efea;padding:60px 0;" id="contact-form">
@@ -627,11 +662,11 @@
         DR. R.K. ANAND is working for the welfare and treatment of pets for the last 42 years. Dr. Anand did his Graduation in veterinary Medicine in the year 1967 and Joined A Germen Multinational Veterinary Pharmaceutical Company and successfully completed 15 years in a Managerial Position.<br/><br/>
         After that in year 1983, he started pets practice from small pets clinic JANAK PURI As there was no qualified vet to give relief to the needy sick pets in whole of West Delhi.<br/>
         <ul>
-          <li>Dr RK Anand was awarded the Best Clinic Award in the country by Indian Society for Advancement of Canine Practice in the year 2008 at Chennai by Chief Secretary of Tamil Nadu.</li>
+          <li>Dr RK Anand was awarded the Best Hospital Award in the country by Indian Society for Advancement of Canine Practice in the year 2008 at Chennai by Chief Secretary of Tamil Nadu.</li>
           <li>Lifetime Achievement Award was presented to Dr RK Anand in 2017 on World Veterinary Day by Canine welfare club of India at New Delhi.</li>
           <li>⁠Professional Efficiency Award was awarded to Dr RK Anand by Vetopia at their Annual national conference at Jaipur in 2020.</li>
         </ul>
-        Since then DR. ANAND has been getting popular day by day and modernizing in equipments and services as per the growing need of the pets. For the last 10 years DR. ANANDS PETS HOSPITAL has grown among the 2 to 3 top pets clinic in DELHI & NCR.
+        Since then DR. ANAND has been getting popular day by day and modernizing in equipments and services as per the growing need of the pets. For the last 10 years DR. ANANDS PETS HOSPITAL has grown among the 2 to 3 top pets hospital in DELHI & NCR.
       </p>
     </article>
     <article class="staff-member">
@@ -687,9 +722,9 @@ To further increase is knowledge and technique in treatment of pets in advanced 
       <div class="testimonial-quote">&#10077;</div>
       <div class="testimonial-content">
         <p>
-          Perfect Dr. For your fur baby. The only thing I can say is, He is the one of the few doctors available 24/7 for your baby in delhi NCR. regardless of being in india or abroad. You will always get the solution of the problem your kids are facing. A well equipped clinic with all the facilities needed for their treatment.
-Sometimes, we go to the clinic after reading reviews of other pet parents but instead of following those reviews we should go and feel the experience personally rather than trusting baseless reviews. Their is always 2 sides of the story.
-I have been visiting Dr Anand pet clinic since 2014. Initially, Dr. R.K.Anand used to treat our kids and then later on Dr Gautam also treated them well.
+          Perfect Dr. For your fur baby. The only thing I can say is, He is the one of the few doctors available 24/7 for your baby in delhi NCR. regardless of being in india or abroad. You will always get the solution of the problem your kids are facing. A well equipped Hospital with all the facilities needed for their treatment.
+Sometimes, we go to the hospital after reading reviews of other pet parents but instead of following those reviews we should go and feel the experience personally rather than trusting baseless reviews. Their is always 2 sides of the story.
+I have been visiting Dr Anand pet hospital since 2014. Initially, Dr. R.K.Anand used to treat our kids and then later on Dr Gautam also treated them well.
 
         </p>
         <div class="testimonial-author">Arjun Mehra</div>
@@ -701,7 +736,7 @@ I have been visiting Dr Anand pet clinic since 2014. Initially, Dr. R.K.Anand us
       <div class="testimonial-quote">&#10077;</div>
       <div class="testimonial-content">
         <p>
-          I’ve been visiting this clinic for 20 years, and all my pets have been treated by Dr. Gautam Anand — one of the best vets I’ve ever met. He’s highly knowledgeable and genuinely cares for animals. His father, Dr. R.K. Anand, is also a wonderful, humble vet who treats every pet with great love and care. Truly a trustworthy and compassionate clinic!
+          I’ve been visiting this hospital for 20 years, and all my pets have been treated by Dr. Gautam Anand — one of the best vets I’ve ever met. He’s highly knowledgeable and genuinely cares for animals. His father, Dr. R.K. Anand, is also a wonderful, humble vet who treats every pet with great love and care. Truly a trustworthy and compassionate hospital!
         </p>
         <div class="testimonial-author">Neha Kapoor</div>
         <div class="testimonial-meta">What people say about us</div>
@@ -723,7 +758,7 @@ I have been visiting Dr Anand pet clinic since 2014. Initially, Dr. R.K.Anand us
       <div class="testimonial-quote">&#10077;</div>
       <div class="testimonial-content">
         <p>
-          We have been visiting Doctor Anand’s pet clinic for more than 20 years and have immense faith in the Doctor and his professional acumen. Dr Anand is one of the few Vets left in the country who is still passionate about his work, he exercises due diligence and care while examining patients and is also readily available on phone for any follow up queries. Dr Saab is an institution in himself and any amount of reviews cannot do justice to his high standards of professionalism.
+          We have been visiting Doctor Anand’s pet hospital for more than 20 years and have immense faith in the Doctor and his professional acumen. Dr Anand is one of the few Vets left in the country who is still passionate about his work, he exercises due diligence and care while examining patients and is also readily available on phone for any follow up queries. Dr Saab is an institution in himself and any amount of reviews cannot do justice to his high standards of professionalism.
         </p>
         <div class="testimonial-author">Simran Kaur</div>
         <div class="testimonial-meta">What people say about us</div>
@@ -840,25 +875,25 @@ I have been visiting Dr Anand pet clinic since 2014. Initially, Dr. R.K.Anand us
   <section class="faq container" aria-label="Frequently Asked Questions">
     <h2>FAQ’s</h2>
     <div class="faq-item">
-      <button class="faq-question" aria-expanded="false">Where can I find a Vetic Pet Clinic near me?</button>
+      <button class="faq-question" aria-expanded="false">Where can I find a Vetic Pet Hospital near me?</button>
       <div class="faq-answer" hidden>
-        <p>Our clinics are located at Vikas Puri, Janakpuri, and GK-1.</p>
+        <p>Our hospitals are located at Vikas Puri, Janakpuri, and GK-1.</p>
       </div>
     </div>
     <div class="faq-item">
-      <button class="faq-question" aria-expanded="false">Does Vetic Pet Clinics near me provide blood tests, X-ray and USG services?</button>
+      <button class="faq-question" aria-expanded="false">Does Vetic Pet Hospitals near me provide blood tests, X-ray and USG services?</button>
       <div class="faq-answer" hidden>
-        <p>Yes, all our clinics offer comprehensive diagnostic services including blood tests, X-rays, and ultrasounds.</p>
+        <p>Yes, all our hospitals offer comprehensive diagnostic services including blood tests, X-rays, and ultrasounds.</p>
       </div>
     </div>
     <div class="faq-item">
-      <button class="faq-question" aria-expanded="false">Does the Vetic Clinic in Delhi have surgery facilities?</button>
+      <button class="faq-question" aria-expanded="false">Does the Vetic Hospital in Delhi have surgery facilities?</button>
       <div class="faq-answer" hidden>
         <p>Yes, we have fully equipped operation theatres across all centers.</p>
       </div>
     </div>
     <div class="faq-item">
-      <button class="faq-question" aria-expanded="false">Does Vetic Pet Clinic in Delhi provide post-surgery care?</button>
+      <button class="faq-question" aria-expanded="false">Does Vetic Pet Hospital in Delhi provide post-surgery care?</button>
       <div class="faq-answer" hidden>
         <p>Absolutely, we provide thorough post-operative and intensive care.</p>
       </div>
@@ -891,7 +926,7 @@ I have been visiting Dr Anand pet clinic since 2014. Initially, Dr. R.K.Anand us
   <div class="footer-inner container">
     <!-- Left: Logo & Description -->
     <div class="footer-column footer-brand">
-      <img src="img/logo.jpg" alt="Dr. Anand's Pets Clinic logo" class="footer-logo" />
+      <img src="img/logo1.jpeg" alt="Dr. Anand's Pets Clinic logo" class="footer-logo" />
       <p class="footer-desc">
         Dr. Anands Pets clinic is a veterinary hospital<br>
         with a unique approach to the healthcare<br>
@@ -904,10 +939,10 @@ I have been visiting Dr Anand pet clinic since 2014. Initially, Dr. R.K.Anand us
       <ul class="footer-menu">
         <li><a href="#services">Services</a></li>
         <li><a href="about-us.html">About Us</a></li>
-        <li><a href="#when-to-visit">When to Visit</a></li>
-        <li><a href="#hints-tips">Hints & Tips</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="/contact-us.html">Contact Us</a></li>
+        <li><a href="regular-check.html">When to Visit</a></li>
+        <li><a href="hints&tips.html">Hints & Tips</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact-us.html">Contact Us</a></li>
       </ul>
     </nav>
 
@@ -955,7 +990,7 @@ I have been visiting Dr Anand pet clinic since 2014. Initially, Dr. R.K.Anand us
   </div>
 
   <div class="footer-bottom">
-    Dr Anands Pets Clinic © 2016 All Rights Reserved
+    Dr Anands Pets Hospital © 2016 All Rights Reserved
     <a href="terms.html">Terms of Use</a> and
     <a href="privacy.html">Privacy Policy</a>
   </div>

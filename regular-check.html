@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Dr. Anand's Pets Clinic</title>
-    
+    <title>Regular Check Based Issues | Dr. Anand's Pets Clinic</title>
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
     
@@ -199,47 +199,97 @@
         .breadcrumb a:hover {
             text-decoration: underline;
         }
+        /* Premium Pet Health Section Styling */
+.pet-health-section {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #fafbfc;
+    padding: 3rem 1rem;
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.14);
+    margin: 2rem 0;
+}
+.pet-health-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 18px rgba(60,60,80,0.10);
+    padding: 2.3rem;
+}
+.section-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #253257;
+    text-align: center;
+    margin-bottom: 1.2rem;
+}
+.section-description {
+    font-size: 1.13rem;
+    color: #7c8796;
+    text-align: center;
+    margin-bottom: 2.1rem;
+}
+.health-section {
+    margin-top: 2.8rem;
+    padding: 2rem 1.5rem;
+    background: #f8fafb;
+    border-radius: 18px;
+    box-shadow: 0 2px 20px rgba(220,220,160,0.07);
+}
+.health-section h3 {
+    font-size: 1.3rem;
+    color: #2a3e6d;
+    border-left: 4px solid #ede648;
+    padding-left: 12px;
+    margin-bottom: 1.6rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.health-img-center {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.4rem;
+}
+.health-img-center img {
+    width: 300px;
+    max-width: 90vw;
+    height: auto;
+    border-radius: 14px;
+    box-shadow: 0 2px 16px rgba(208,200,90,0.13);
+    background: #fffbed;
+    padding: 0.8rem;
+    transition: transform 0.2s cubic-bezier(.34,1.56,.64,1);
+}
+.health-img-center img:hover {
+    transform: scale(1.04);
+}
+.health-text {
+    color: #495370;
+    font-size: 1.11rem;
+    line-height: 1.85;
+}
+.health-text p {
+    margin-bottom: 1.15rem;
+    margin-top: 0;
+}
+@media (max-width: 700px) {
+    .pet-health-container {
+        padding: 1rem;
+        border-radius: 8px;
+    }
+    .health-section {
+        padding: 1rem 0.2rem;
+        border-radius: 8px;
+    }
+    .health-img-center img {
+        width: 200px;
+        padding: 0.5rem;
+    }
+}
 
-        /* ABOUT US SECTION */
-        .about-section {
-            padding: 60px 0;
-        }
-
-        .about-content {
-            display: flex;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .about-text {
-            flex: 1;
-        }
-
-        .about-text h1 {
-            font-size: 2.5rem;
-            color: #234e70;
-            margin-bottom: 30px;
-            font-weight: 700;
-        }
-
-        .about-text p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: #555;
-            margin-bottom: 20px;
-        }
-
-        .about-image {
-            flex: 1;
-            text-align: center;
-        }
-
-        .about-image img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-        }
 
         /* FOOTER */
         .site-footer {
@@ -413,16 +463,6 @@
                 grid-template-columns: 1fr;
             }
 
-            .about-content {
-                flex-direction: column;
-                gap: 40px;
-                text-align: center;
-            }
-
-            .about-text h1 {
-                font-size: 2rem;
-            }
-
             .footer-content {
                 grid-template-columns: 1fr;
                 gap: 30px;
@@ -507,15 +547,6 @@
     }
         }
 
-        @media (max-width: 480px) {
-            .about-text h1 {
-                font-size: 1.8rem;
-            }
-
-            .about-text p {
-                font-size: 1rem;
-            }
-        }
     </style>
 </head>
 <body>
@@ -557,7 +588,7 @@
                             </ul>
                         </li>
                         <li><a href="hints&tips.html">Hints and Tips</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
                         <li><a href="contact-us.html">Contact Us</a></li>
                     </ul>
                 </nav>
@@ -571,35 +602,51 @@
 
     <div class="breadcrumb">
         <div class="container">
-            <a href="index.html">Home</a> &gt; <span>About Us</span>
+            <a href="index.html">Home</a> &gt; <span>Regular Check Based Issues</span>
         </div>
     </div>
+<section class="pet-health-section">
+  <div class="pet-health-container">
+    <h2 class="section-title">Regular Checks Required for Your Dogs</h2>
+    <p class="section-description">
+      At the Dr. Anand’s Pets Clinic, we provide numerous other services to ensure that pet owners have an easy life by finding all they need for their pet care under one roof. Many pet owners like to maintain the health and fitness of their pet to the best of standards for various reasons. The following are other services we provide in the endeavour to help them with their pursuit of caring for their pet.
+    </p>
 
-    <section class="about-section">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h1>About Us</h1>
-                    <p>
-                        A supportive, calm and understanding veterinarian is akin to a warm blanket. Even when you don't need it, it reminds you of comfort.
-                        Dr. Anand's pet's hospital in West Delhi/NCR is providing such services to its clients since the year 1983.
-                    </p>
-                    <p>
-                        The care hospital was established to meet the need of veterinary emergencies & critical care for pets.
-                        Being run by a team of essentially experienced veterinary professionals under the inspirational leadership of Dr. R.K Anand,
-                        the center is excellent in its surgical, reproduction and ultrasound support and its recently set critical care unit.
-                    </p>
-                    <p>
-                        Ably supported by Dr. Gautam Anand, the hospital is flourishing in its service to exclusive beings of God providing uncompromising care
-                        and assistance to all animals.
-                    </p>
-                </div>
-                <div class="about-image">
-                    <img src="img/Dogwithdocs.jpeg" alt="Dr. Anand's Pet Hospital with a happy dog">
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class="health-section block">
+      <h3>Anal Glands Cleaning</h3>
+      <div class="health-img-center">
+        <img src="img/analgland.jpg" alt="Anal glands cleaning diagram" />
+      </div>
+      <div class="health-text">
+        <p>
+          A dog’s anal glands are the two small sacks bracketing from the anus. If you notice that your dog is continually licking his rectal area or dragging this area across the ground, it may indicate that the anal glands of the dog are full or infected. Make sure to consult your veterinarian about this. Usually, the way to deal with this problem is by regularly emptying out or expressing the anal glands. In order to do this, the dog must be standing in its bathtub with his head to the left and his behind area on the right, in the case of right-handed people that is. Next lift the dog’s tail upwards firmly with your left hand and press on both sides of the dog’s anus using your thumb and your index finger with your right hand.
+        </p>
+        <p>
+          When beginning this procedure, often times you will be able to notice a bulging and this indicates that the anal glands are obstructed. When the anal glands are emptied out correctly this bulging usually goes away. Next, wash out the black, brown, or gray substance that comes out with shampoo in order to get rid of the unpleasant odor. If you see that the dog seems to be in a lot of pain, or if the substance that comes out of the dog’s anal glands is green, it could mean that there is an infection so make sure to get hold of your veterinarian.
+        </p>
+      </div>
+    </div>
+
+    <div class="health-section block">
+      <h3>Removal of Ticks</h3>
+      <div class="health-img-center">
+        <img src="img/ticks.jpg" alt="Dog ticks diagram" />
+      </div>
+      <div class="health-text">
+        <p>
+          A careful pet owner can avoid most diseases in their pet but issues like dog ticks are just one of the problems that may affect your dog at least once in its lifetime. Dog ticks are usually obtained in the woods and open fields, especially as you go into certain places where the trees are high and insects are numerous.
+        </p>
+        <p>
+          In all cases, pet owners need take precautionary measures to ensure avoidance of ticks from coming into contact with dogs. If you still like to take your dog for a walk, make sure that you follow safety procedures so as not to take dog ticks home. Talk to the vet about what should be done when going out on nature trips with your pet. If your dog becomes infected with dog ticks, make sure that you provide it with the necessary care and treatment.
+        </p>
+        <p>
+          We will keep adding more stuff here so visit back for more updates on regular stuff that needs to be taken care of, in your pet.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
     <footer class="site-footer">
         <div class="container">
